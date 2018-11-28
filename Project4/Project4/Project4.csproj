@@ -68,7 +68,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App_Themes\styles\master.scss" />
-    <Content Include="App_Themes\styles\styles.css" />
+    <Content Include="App_Themes\styles\master.css">
+      <DependentUpon>master.scss</DependentUpon>
+    </Content>
+    <Content Include="App_Themes\styles\master.min.css">
+      <DependentUpon>master.css</DependentUpon>
+    </Content>
     <Content Include="Index.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -91,6 +96,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Master.Master" />
+    <None Include="compilerconfig.json" />
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
