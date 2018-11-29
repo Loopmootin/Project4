@@ -41,6 +41,12 @@
     .container .split-container img {
       width: 100%; }
 
+.form-inline .form-control {
+  width: 100px; }
+
+/* ============================
+    Footer
+ ============================= */
 footer {
   background-color: #374a67;
   color: #eee;

@@ -60,10 +60,20 @@ body {
     }
 }
 
+
+.form-inline .form-control {
+    width: 100px;
+}
+
+/* ============================
+    Footer
+ ============================= */
+
 footer {
     background-color: $blue;
     color: $white;
     min-height: 80px;
+
     .footer-container {
         width: 60%;
         background-color: $blue;
