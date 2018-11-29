@@ -4,6 +4,7 @@
 </asp:Content>
 <asp:Content ID="ContentBody" ContentPlaceHolderID="ContentPlaceHolderBody" runat="server">
     <div class="category-box">
+        <h2>Film kategorier</h2>
         <ul>
             <li><a href="#">Animation</a></li>
             <li><a href="#">Thriller</a></li>
@@ -12,6 +13,7 @@
         </ul>
     </div>
     <div class="commercial-box">
+        <h2>Tag hånd om dine problemer</h2>
         <img src="Pictures/commercial-meme.jpg" alt="Commercial" />
     </div>
     <div class="container">  

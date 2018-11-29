@@ -1,7 +1,9 @@
-﻿$white: #eee;
+﻿$white: #fff;
 $blue: #374a67;
 $green: #397367;
 $gray: #9c91a6;
+
+$border: 5px;
 
 body {
     font-family: Roboto, Arial, Helvetica, sans-serif;
@@ -12,16 +14,18 @@ body {
 .navbar {
     background-color: $blue;
     min-height: 80px;
+
     a {
         color: $white;
     }
+
     .btn-outline-success {
         border: 1px solid $white;
         color: $white;
 
         &:hover {
             background-color: $white;
-            color: $blue;
+            color: $gray;
         }
     }
 }
@@ -32,6 +36,10 @@ body {
     top: 100px;
     padding: 10px;
     background-color: $white;
+    border-radius: $border;
+    h2 {
+        text-align: center;
+    }
 }
 
 .commercial-box {
@@ -43,19 +51,56 @@ body {
 
 .category-box {
     left: 20px;
+
+    ul {
+        width: 100%;
+        padding: 0;
+
+        li {
+            width: 100%;
+            border-bottom: 1px solid #ddd;
+            list-style-type: none;
+
+            a {
+                display: block;
+                color: black;
+                width: 100%;
+                padding: 5px 10px;
+            }
+        }
+    }
 }
 
 .container {
     width: 60%;
     background-color: $white;
+    background: rgba(255, 255, 255, 0.9);
     padding: 50px 0;
 
     .split-container {
         min-height: 250px;
-        border: 1px solid black;
+        background-color: $gray;
+        padding: 15px;
+        border-radius: $border;
+        overflow: hidden;
+        transform: scale(1);
+        transition: 0.5s;
 
         img {
             width: 100%;
+            transform: scale(1);
+            transition: 0.5s;
+        }
+
+        &:hover {
+            transform: scale(1.02);
+            transition: 0.5s;
+            z-index: 200;
+
+            img {
+                transform: scale(0.96);
+                transition: 0.5s;
+            }
         }
     }
 }
@@ -64,6 +109,7 @@ footer {
     background-color: $blue;
     color: $white;
     min-height: 80px;
+
     .footer-container {
         width: 60%;
         background-color: $blue;
