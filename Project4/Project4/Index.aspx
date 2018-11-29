@@ -13,7 +13,6 @@
         </ul>
     </div>
     <div class="commercial-box">
-        <h2>Tag hånd om dine problemer</h2>
         <img src="Pictures/commercial-meme.jpg" alt="Commercial" />
     </div>
     <div class="container">  
