@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="ContentBody" ContentPlaceHolderID="ContentPlaceHolderBody" runat="server">
     <div class="category-box">
-        <h2>Film kategorier</h2>
+        <h3>Kategorier</h3>
         <ul>
             <li><a href="#">Animation</a></li>
             <li><a href="#">Thriller</a></li>
