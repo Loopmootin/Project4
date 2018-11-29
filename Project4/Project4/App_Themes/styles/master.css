@@ -71,6 +71,12 @@
         transform: scale(0.96);
         transition: 0.5s; }
 
+.form-inline .form-control {
+  width: 100px; }
+
+/* ============================
+    Footer
+ ============================= */
 footer {
   background-color: #374a67;
   color: #fff;
