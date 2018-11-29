@@ -1,2 +1,45 @@
 ﻿body {
-  background-color: red; }
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  background-color: #fff; }
+
+.navbar {
+  background-color: #374a67;
+  min-height: 80px; }
+  .navbar a {
+    color: #eee; }
+  .navbar .btn-outline-success {
+    border: 1px solid #eee;
+    color: #eee; }
+    .navbar .btn-outline-success:hover {
+      background-color: #eee;
+      color: #374a67; }
+
+.commercial-box, .category-box {
+  width: 15%;
+  position: fixed;
+  top: 100px;
+  padding: 10px;
+  background-color: #eee; }
+
+.commercial-box {
+  right: 20px; }
+  .commercial-box img {
+    width: 100%; }
+
+.category-box {
+  left: 20px; }
+
+.container {
+  width: 60%;
+  background-color: #eee;
+  padding: 50px 0; }
+  .container .split-container {
+    min-height: 250px;
+    border: 1px solid black; }
+    .container .split-container img {
+      width: 100%; }
+
+footer {
+  background-color: #374a67;
+  color: #eee;
+  min-height: 80px; }
