@@ -50,7 +50,38 @@
     </form>
 
     <footer>
-        <p>This is a School Project!</p>
+         <div class="footer-container">
+          <div class="row">
+            <div class="col-sm">
+              <h2>Social Medier</h2>
+                <hr />
+                <ul>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Instagram</li>
+                </ul>
+            </div>
+            <div class="col-sm">
+              <h2>Navigation</h2>
+                <hr />
+                <ul>
+                     <li>Film</li>
+                     <li>Artikler</li>
+                     <li>Kontakt</li>
+                </ul>
+            </div>
+            <div class="col-sm">
+              <h2>Kategorier</h2>
+                <hr /> 
+                <ul>
+                    <li><a href="#">Animation</a></li>
+                    <li><a href="#">Thriller</a></li>
+                    <li><a href="#">Science Fiction</a></li>
+                    <li><a href="#">Action</a></li>
+                </ul>
+            </div>
+          </div>
+        </div>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
