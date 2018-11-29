@@ -74,7 +74,9 @@
     <Content Include="App_Themes\styles\master.min.css">
       <DependentUpon>master.css</DependentUpon>
     </Content>
+    <Content Include="custom.js" />
     <Content Include="Index.aspx" />
+    <Content Include="Testpage.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -93,6 +95,13 @@
       <DependentUpon>Master.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Testpage.aspx.cs">
+      <DependentUpon>Testpage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Testpage.aspx.designer.cs">
+      <DependentUpon>Testpage.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Master.Master" />
