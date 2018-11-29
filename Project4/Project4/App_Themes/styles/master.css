@@ -1,9 +1,15 @@
-﻿body {
+﻿/* ============================
+    SASS Variables
+ ============================= */
+body {
   font-family: Roboto, Arial, Helvetica, sans-serif;
   background-image: url("../../Pictures/background-image.jpg");
   background-size: cover;
   background-repeat: no-repeat; }
 
+/* ============================
+    Nav
+ ============================= */
 .navbar {
   background-color: #374a67;
   min-height: 80px; }
@@ -16,6 +22,9 @@
       background-color: #fff;
       color: #9c91a6; }
 
+/* ============================
+    Front page content
+ ============================= */
 .commercial-box, .category-box {
   width: 15%;
   position: fixed;
@@ -46,6 +55,9 @@
         width: 100%;
         padding: 5px 10px; }
 
+/* ============================
+    Front page container
+ ============================= */
 .container {
   width: 60%;
   background-color: #fff;
