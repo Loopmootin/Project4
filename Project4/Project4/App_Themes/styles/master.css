@@ -2,8 +2,7 @@
   font-family: Roboto, Arial, Helvetica, sans-serif;
   background-image: url("../../Pictures/background-image.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
-  transform: scale(0.9); }
+  background-repeat: no-repeat; }
 
 .navbar {
   background-color: #374a67;
