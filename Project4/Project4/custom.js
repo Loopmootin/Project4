@@ -3,10 +3,10 @@
 
     $('#search').hover(
         function () {
-            $(this).animate({ width: '150px' }, 500);
+            $(this).animate({ width: '200px' }, 500);
         },
         function () {
-            $(this).animate({ width: '100px' }, 300);
+            $(this).animate({ width: '150px' }, 300);
         }
     );
 
