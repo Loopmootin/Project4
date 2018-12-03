@@ -21,13 +21,13 @@
 <body>
     <nav class="navbar navbar-expand-lg">
       <a class="navbar-brand" href="#">FuckingFilm</a>
-
       <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-         <form class="form-inline my-2 my-lg-0">
+         <form class="form-inline my-2 my-lg-0" >
           <input class="form-control mr-sm-2" id="search" type="search" placeholder="Search" aria-label="Search">
+             
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Søg Film</button>
         </form>
         <ul class="navbar-nav">
@@ -36,6 +36,19 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="Kategori.aspx"><i class="fas fa-video"></i> Film</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Kategorier
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="Kategori.aspx?id=1">Animation</a>
+              <a class="dropdown-item" href="Kategori.aspx?id=2">Thriller</a>
+              <a class="dropdown-item" href="Kategori.aspx?id=3">Science Fiction</a>
+              <a class="dropdown-item" href="Kategori.aspx?id=4">Action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#"><i class="fas fa-newspaper"></i> Artikler</a>

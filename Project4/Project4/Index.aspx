@@ -3,18 +3,6 @@
     <title>Fucking Film - Forside</title>
 </asp:Content>
 <asp:Content ID="ContentBody" ContentPlaceHolderID="ContentPlaceHolderBody" runat="server">
-    <div class="category-box">
-        <h2>Film kategorier</h2>
-        <ul>
-            <li><a href="Kategori.aspx?id=1">Animation</a></li>
-            <li><a href="Kategori.aspx?id=2">Thriller</a></li>
-            <li><a href="Kategori.aspx?id=3">Science Fiction</a></li>
-            <li><a href="Kategori.aspx?id=4">Action</a></li>
-        </ul>
-    </div>
-    <div class="commercial-box">
-        <img src="Pictures/commercial-meme.jpg" alt="Commercial" />
-    </div>
     <div class="container">  
         <div class="row justify-content-md-center">
             <h2>Top film</h2>

@@ -4,8 +4,8 @@
 body {
   font-family: Roboto, Arial, Helvetica, sans-serif;
   background-image: url("../../Pictures/background-image.jpg");
-  background-size: cover;
-  background-repeat: no-repeat; }
+  background-size: contain;
+  background-repeat: repeat; }
 
 /* ============================
     Nav
@@ -21,6 +21,8 @@ body {
     .navbar .btn-outline-success:hover {
       background-color: #fff;
       color: #9c91a6; }
+  .navbar .dropdown-menu a {
+    color: #000; }
 
 /* ============================
     Front page content

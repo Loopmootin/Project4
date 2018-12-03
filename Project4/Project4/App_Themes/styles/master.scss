@@ -12,8 +12,8 @@ $border: 5px;
 body {
     font-family: Roboto, Arial, Helvetica, sans-serif;
     background-image: url("../../Pictures/background-image.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-size: contain;
+    background-repeat: repeat;
 }
 
 /* ============================
@@ -35,6 +35,12 @@ body {
         &:hover {
             background-color: $white;
             color: $gray;
+        }
+    }
+
+    .dropdown-menu {
+        a {
+            color: #000;
         }
     }
 }
