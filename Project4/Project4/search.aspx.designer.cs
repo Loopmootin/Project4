@@ -10,51 +10,33 @@
 namespace Project4 {
     
     
-    public partial class Master {
+    public partial class search {
         
         /// <summary>
-        /// head control.
+        /// LabelMessage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.WebControls.Label LabelMessage;
         
         /// <summary>
-        /// formContent control.
+        /// LabelResult control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm formContent;
+        protected global::System.Web.UI.WebControls.Label LabelResult;
         
         /// <summary>
-        /// search control.
+        /// ImagePoster control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox search;
-        
-        /// <summary>
-        /// BtnMovieSearch control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnMovieSearch;
-        
-        /// <summary>
-        /// ContentPlaceHolderBody control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolderBody;
+        protected global::System.Web.UI.WebControls.Image ImagePoster;
     }
 }
