@@ -19,6 +19,8 @@
 </head>
 
 <body>
+
+    <form id="formContent" runat="server">
     <nav class="navbar navbar-expand-lg">
       <a class="navbar-brand" href="#">FuckingFilm</a>
       <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -57,10 +59,16 @@
             <a class="nav-link" href="testpage.aspx">Kontakt</a>
           </li>
         </ul>
+         
+          <asp:TextBox ID="search" runat="server" CssClass="form-control mr-sm-2" OnTextChanged="search_TextChanged"></asp:TextBox>
+         
+          <asp:Button ID="BtnMovieSearch" runat="server" OnClick="BtnMovieSearch_Click" Text="Søg Film" CssClass="btn btn-outline-success my-2 my-sm-0" />
+          </button>
+
+        &nbsp;&nbsp;&nbsp;
       </div>
     </nav>
 
-    <form id="formContent" runat="server">
         <asp:ContentPlaceHolder ID="ContentPlaceHolderBody" runat="server">
         </asp:ContentPlaceHolder>
     </form>
