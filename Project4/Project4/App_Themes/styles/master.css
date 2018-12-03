@@ -23,6 +23,8 @@ body {
       color: #9c91a6; }
   .navbar .dropdown-menu a {
     color: #000; }
+  .navbar .form-control {
+    width: 200px; }
 
 /* ============================
     Front page content
