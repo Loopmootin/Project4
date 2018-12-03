@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderBody" runat="server">
 
-        <asp:Repeater ID="Repeater1" runat="server" DataSourceID="SqlDataSource1">
+        <asp:Repeater ID="RepeaterSearch" runat="server">
                <HeaderTemplate>
             <table class="show-pest">
                 <div class="container">  
@@ -24,12 +24,10 @@
                 </div>
             </FooterTemplate>
         </asp:Repeater>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:MoviesDatabaseConnectionString %>" SelectCommand="SELECT * FROM [Movies] WHERE ([movie_name] LIKE '%' + @movie_name + '%')">
-            <SelectParameters>
-                <asp:QueryStringParameter DefaultValue="" Name="movie_name" QueryStringField="searchresult" Type="String" />
-            </SelectParameters>
-        </asp:SqlDataSource>
+        <asp:Label ID="LabelMessage" runat="server" Text="Label"></asp:Label>
     </p>
+        <p>
+        </p>
     <p>
     </p>
        

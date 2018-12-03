@@ -13,21 +13,21 @@ namespace Project4 {
     public partial class search {
         
         /// <summary>
-        /// Repeater1 control.
+        /// RepeaterSearch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater Repeater1;
+        protected global::System.Web.UI.WebControls.Repeater RepeaterSearch;
         
         /// <summary>
-        /// SqlDataSource1 control.
+        /// LabelMessage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
+        protected global::System.Web.UI.WebControls.Label LabelMessage;
     }
 }
