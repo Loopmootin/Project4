@@ -26,21 +26,6 @@ namespace Project4
             string destinationfile = Server.MapPath("xml/CommercialsTransformed.xml");
             string destinationhtmlfile = Server.MapPath("xml/CommercialsTransformed.html");
 
-            FileStream fs = new FileStream(destinationfile, FileMode.Create);
-            XslCompiledTransform xct = new XslCompiledTransform();
-
-            xct.Load(xslfile);
-            xct.Transform(sourcefile, null, fs);
-            fs.Close();
-
-            DataSet ds = new DataSet();
-            ds.ReadXml(destinationfile);
-            DataTable dt = ds.Tables[0];
-            // change default header
-            dt.Columns[0].ColumnName = "My Commercials";
-            GridView1.DataSource = dt;
-            GridView1.DataBind();
-
             FileStream fshtml = new FileStream(destinationhtmlfile, FileMode.Create);
             XslCompiledTransform xcthtml = new XslCompiledTransform();
 
