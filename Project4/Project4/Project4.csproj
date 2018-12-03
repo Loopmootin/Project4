@@ -75,12 +75,20 @@
       <DependentUpon>master.css</DependentUpon>
     </Content>
     <Content Include="custom.js" />
+    <Content Include="film.aspx" />
     <Content Include="Index.aspx" />
     <Content Include="Kategori.aspx" />
     <Content Include="search.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="film.aspx.cs">
+      <DependentUpon>film.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="film.aspx.designer.cs">
+      <DependentUpon>film.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
