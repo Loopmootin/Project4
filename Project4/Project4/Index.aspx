@@ -4,7 +4,10 @@
 </asp:Content>
 <asp:Content ID="ContentBody" ContentPlaceHolderID="ContentPlaceHolderBody" runat="server">
     <div class="container">  
-        <div class="row justify-content-md-center">
+
+        <asp:Literal ID="LiteralHTML" runat="server"></asp:Literal>
+
+        <div class="justify-content-md-center">
             <h2>Top film</h2>
             <div class="top-movies-container col-12 justify-content-around row">
                 <div class="top-movie col-3 split-container">
@@ -42,7 +45,6 @@
                 </div>
             </div>
         </div>
-        <asp:Literal ID="LiteralHTML" runat="server"></asp:Literal>
     </div>
 </asp:Content>
 

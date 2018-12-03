@@ -11,7 +11,7 @@ $border: 5px;
 
 body {
     font-family: Roboto, Arial, Helvetica, sans-serif;
-    background-image: url("../../Pictures/background-image.jpg");
+    //background-image: url("../../Pictures/background-image.jpg");
     background-size: contain;
     background-repeat: repeat;
 }
@@ -55,12 +55,13 @@ body {
  ============================= */
 
 .container {
-    width: 60%;
+    width: 100%;//60%;
     background-color: $white;
-    padding: 50px 0;
+    padding: 0 0 50px 0;
 
     .split-container {
         min-height: 250px;
+        max-width: 30%;
         padding: 15px;
         overflow: hidden;
         transform: scale(1);
@@ -85,16 +86,33 @@ body {
     }
 
     .commercials {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-
+        margin-top: 20px;
         .commercial {
             display: none;
+
+            h3, p {
+                z-index: 2;
+                position: absolute;
+                color: #fff;
+                width: 60%;
+                padding-left: 20px;
+                margin-top: 20px;
+            }
+
+            p {
+                position: relative;
+                bottom: 35px;
+                width: 100%;
+                text-align: right;
+                padding-right: 20px;
+                margin-top: 0px;
+            }
+
             .logo-img {
                 height: 200px;
-                width: 200px;
+                width: 100%;
+                z-index: 1;
+                overflow: hidden;
             }
         }
     }
@@ -129,5 +147,11 @@ footer {
 @media only screen and (max-width: 1200px) {
     .commercial-box, .category-box {
         display: none;
+    }
+}
+
+@media only screen and (max-width: 990px) {
+    .my-sm-0 {
+        margin-top: 5px !important;
     }
 }
