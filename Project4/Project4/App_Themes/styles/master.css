@@ -50,9 +50,16 @@ body {
       .container .split-container:hover img {
         transform: scale(0.96);
         transition: 0.5s; }
-  .container .logo-img {
-    height: 200px;
-    width: 200px; }
+  .container .commercials {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    .container .commercials .commercial {
+      display: inline-block; }
+      .container .commercials .commercial .logo-img {
+        height: 200px;
+        width: 200px; }
 
 .form-inline .form-control {
   width: 150px; }

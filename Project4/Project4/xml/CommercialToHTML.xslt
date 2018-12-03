@@ -5,40 +5,25 @@
     <xsl:output method="html"/>
 
     <xsl:template match="/">
-      <h3>List of Commercials</h3>
-      <table border="1">
-        <tr>
-          <th>Owner</th>
-          <th>Webpage</th>
-          <th>Logo</th>
-          <th>Phone</th>
-        </tr>
-        <xsl:apply-templates select="//c:commercials"/>
-      </table>
+      <div class="commercials">
+          <xsl:apply-templates select="//c:commercials"/>
+        </div>
     </xsl:template>
     <xsl:template match="c:commercial">
-      <tr>
-        <td>
-          <xsl:value-of select="c:director"/>
-          <xsl:value-of select="c:owner"/>
-          <xsl:value-of select="c:directors/c:chiefdirector"/>
-          <xsl:value-of select="c:directors/c:director"/>
-        </td>
-        <td>
-          <xsl:value-of select="c:webpage"/>
-        </td>
-        <td>  
-          <img class="logo-img" alt="">
-            <xsl:attribute name="src">
-              logo-img/<xsl:value-of select="c:logo"/>
-              <xsl:value-of select="c:ourlogo"/>
-            </xsl:attribute>
-          </img>
-        </td>
-        <td>
+      <div class="commercial">
+        <h3>
+          <xsl:value-of select="@company"/>
+        </h3>
+        <img class="logo-img" alt="commercial image">
+          <xsl:attribute name="src">
+            logo-img/<xsl:value-of select="c:logo"/>
+            <xsl:value-of select="c:ourlogo"/>
+          </xsl:attribute>
+        </img>
+        <p>
           <xsl:value-of select="c:telephones/c:telephone"/>
           <xsl:value-of select="c:telephone"/>
-        </td>
-      </tr>
+        </p>
+      </div>
     </xsl:template>
 </xsl:stylesheet>

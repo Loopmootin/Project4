@@ -84,9 +84,19 @@ body {
         }
     }
 
-    .logo-img {
-        height: 200px;
-        width: 200px;
+    .commercials {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .commercial {
+            display: inline-block;
+            .logo-img {
+                height: 200px;
+                width: 200px;
+            }
+        }
     }
 }
 
