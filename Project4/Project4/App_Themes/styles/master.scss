@@ -88,10 +88,10 @@ body {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-around;
 
         .commercial {
-            display: inline-block;
+            display: none;
             .logo-img {
                 height: 200px;
                 width: 200px;

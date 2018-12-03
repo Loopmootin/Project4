@@ -54,9 +54,9 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between; }
+    justify-content: space-around; }
     .container .commercials .commercial {
-      display: inline-block; }
+      display: none; }
       .container .commercials .commercial .logo-img {
         height: 200px;
         width: 200px; }

@@ -36,6 +36,9 @@
           <li class="nav-item">
             <a class="nav-link" href="Kategori.aspx"><i class="fas fa-video"></i> Film</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fas fa-newspaper"></i> Artikler</a>
+          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Kategorier
@@ -48,9 +51,6 @@
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="#">Something else here</a>
             </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fas fa-newspaper"></i> Artikler</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="testpage.aspx">Kontakt</a>
@@ -88,10 +88,10 @@
               <h2>Kategorier</h2>
                 <hr /> 
                 <ul>
-                    <li><a href="#">Animation</a></li>
-                    <li><a href="#">Thriller</a></li>
-                    <li><a href="#">Science Fiction</a></li>
-                    <li><a href="#">Action</a></li>
+                    <li><a href="Kategori.aspx?id=1"">Animation</a></li>
+                    <li><a href="Kategori.aspx?id=2">Thriller</a></li>
+                    <li><a href="Kategori.aspx?id=3">Science Fiction</a></li>
+                    <li><a href="Kategori.aspx?id=4">Action</a></li>
                 </ul>
             </div>
           </div>

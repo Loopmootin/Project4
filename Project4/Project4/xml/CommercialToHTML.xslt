@@ -5,6 +5,7 @@
     <xsl:output method="html"/>
 
     <xsl:template match="/">
+      <h3>Commercials</h3>
       <div class="commercials">
           <xsl:apply-templates select="//c:commercials"/>
         </div>
@@ -21,6 +22,7 @@
           </xsl:attribute>
         </img>
         <p>
+          Contact: 
           <xsl:value-of select="c:telephones/c:telephone"/>
           <xsl:value-of select="c:telephone"/>
         </p>
