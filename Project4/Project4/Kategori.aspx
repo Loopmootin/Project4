@@ -3,5 +3,26 @@
     <title>Fucking Film - Kategori</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderBody" runat="server">
-    <h1>Kategorier</h1>
+    
+    <asp:Repeater ID="RepeaterMovies" runat="server">
+         <HeaderTemplate>
+            <table class="show-pest">
+                <div class="container">  
+                    <div class="row justify-content-md-center">
+        </HeaderTemplate>
+            <ItemTemplate>
+                
+                 <div class="top-movie col-3 split-container">
+                    <%# Eval("movie_name") %>
+                </div>
+              
+            </ItemTemplate>
+            <FooterTemplate>
+                        </div>
+                </div>
+            </FooterTemplate>
+    </asp:Repeater>
+
+    <asp:Label ID="LabelMessage" runat="server" Text="Label"></asp:Label>
+    
 </asp:Content>

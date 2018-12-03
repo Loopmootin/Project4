@@ -6,10 +6,10 @@
     <div class="category-box">
         <h2>Film kategorier</h2>
         <ul>
-            <li><a href="#">Animation</a></li>
-            <li><a href="#">Thriller</a></li>
-            <li><a href="#">Science Fiction</a></li>
-            <li><a href="#">Action</a></li>
+            <li><a href="Kategori.aspx?id=1">Animation</a></li>
+            <li><a href="Kategori.aspx?id=2">Thriller</a></li>
+            <li><a href="Kategori.aspx?id=3">Science Fiction</a></li>
+            <li><a href="Kategori.aspx?id=4">Action</a></li>
         </ul>
     </div>
     <div class="commercial-box">
