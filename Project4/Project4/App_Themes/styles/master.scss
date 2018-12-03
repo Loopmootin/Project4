@@ -49,52 +49,6 @@ body {
     }
 }
 
-/* ============================
-    Front page content
- ============================= */
-
-.commercial-box, .category-box {
-    width: 18%;
-    position: fixed;
-    top: 100px;
-    padding: 10px;
-    background-color: $white;
-    border-radius: $border;
-
-    h2 {
-        text-align: center;
-    }
-}
-
-
-.commercial-box {
-    right: 15px;
-    img {
-        width: 100%;
-    }
-}
-
-.category-box {
-    left: 15px;
-
-    ul {
-        width: 100%;
-        padding: 0;
-
-        li {
-            width: 100%;
-            border-bottom: 1px solid #ddd;
-            list-style-type: none;
-
-            a {
-                display: block;
-                color: black;
-                width: 100%;
-                padding: 5px 10px;
-            }
-        }
-    }
-}
 
 /* ============================
     Front page container
@@ -128,6 +82,11 @@ body {
                 transition: 0.5s;
             }
         }
+    }
+
+    .logo-img {
+        height: 200px;
+        width: 200px;
     }
 }
 

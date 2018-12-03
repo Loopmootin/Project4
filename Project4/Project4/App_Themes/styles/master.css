@@ -27,39 +27,6 @@ body {
     width: 200px; }
 
 /* ============================
-    Front page content
- ============================= */
-.commercial-box, .category-box {
-  width: 18%;
-  position: fixed;
-  top: 100px;
-  padding: 10px;
-  background-color: #fff;
-  border-radius: 5px; }
-  .commercial-box h2, .category-box h2 {
-    text-align: center; }
-
-.commercial-box {
-  right: 15px; }
-  .commercial-box img {
-    width: 100%; }
-
-.category-box {
-  left: 15px; }
-  .category-box ul {
-    width: 100%;
-    padding: 0; }
-    .category-box ul li {
-      width: 100%;
-      border-bottom: 1px solid #ddd;
-      list-style-type: none; }
-      .category-box ul li a {
-        display: block;
-        color: black;
-        width: 100%;
-        padding: 5px 10px; }
-
-/* ============================
     Front page container
  ============================= */
 .container {
@@ -83,6 +50,9 @@ body {
       .container .split-container:hover img {
         transform: scale(0.96);
         transition: 0.5s; }
+  .container .logo-img {
+    height: 200px;
+    width: 200px; }
 
 .form-inline .form-control {
   width: 150px; }

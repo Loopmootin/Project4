@@ -27,9 +27,13 @@
         <td>
           <xsl:value-of select="c:webpage"/>
         </td>
-        <td>
-          <xsl:value-of select="c:logo"/>
-          <xsl:value-of select="c:ourlogo"/>
+        <td>  
+          <img class="logo-img" alt="">
+            <xsl:attribute name="src">
+              logo-img/<xsl:value-of select="c:logo"/>
+              <xsl:value-of select="c:ourlogo"/>
+            </xsl:attribute>
+          </img>
         </td>
         <td>
           <xsl:value-of select="c:telephones/c:telephone"/>
