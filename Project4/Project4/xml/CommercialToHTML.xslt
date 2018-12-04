@@ -10,21 +10,26 @@
         </div>
     </xsl:template>
     <xsl:template match="c:commercial">
-      <div class="commercial">
-        <h3>
-          <xsl:value-of select="@company"/>
-        </h3>
-        <img class="logo-img" alt="commercial image">
-          <xsl:attribute name="src">
-            logo-img/<xsl:value-of select="c:logo"/>
-            <xsl:value-of select="c:ourlogo"/>
-          </xsl:attribute>
-        </img>
-        <p>
-          Contact:
-          <xsl:value-of select="c:telephones/c:telephone"/>
-          <xsl:value-of select="c:telephone"/>
-        </p>
-      </div>
+      <a>
+        <xsl:attribute name="href">
+          Index.aspx?id=<xsl:value-of select="@company"/>
+        </xsl:attribute>
+          <div class="commercial">
+            <h3>
+              <xsl:value-of select="@company"/>
+            </h3>
+            <img class="logo-img" alt="commercial image">
+              <xsl:attribute name="src">
+                logo-img/<xsl:value-of select="c:logo"/>
+                <xsl:value-of select="c:ourlogo"/>
+              </xsl:attribute>
+            </img>
+            <p>
+              Contact:
+              <xsl:value-of select="c:telephones/c:telephone"/>
+              <xsl:value-of select="c:telephone"/>
+            </p>
+          </div>
+      </a>
     </xsl:template>
 </xsl:stylesheet>
