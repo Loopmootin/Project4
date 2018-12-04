@@ -141,9 +141,66 @@ footer {
 }
 
 /* ============================
-    Media queries
+    Category site
  ============================= */
 
+.category-selection {
+    display: block;
+    width: 60%;
+    margin: 30px auto;
+
+    .category-selection-category {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-bottom: 10px;
+
+        .category-selector {
+            background-color: $blue;
+            padding: 5px 10px;
+            border-radius: $border;
+            color: white;
+            text-decoration: none;
+            margin: 5px;
+
+            &:hover {
+                color: $blue;
+                background-color: $white;
+                border: 1px solid $blue;
+                padding: 4px 9px;
+            }
+        }
+    }
+
+    .category-selection-year {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 100%;
+
+        .category-selector {
+            background-color: $blue;
+            padding: 5px 10px;
+            border-radius: $border;
+            color: white;
+            text-decoration: none;
+            margin: 5px;
+
+            &:hover {
+                color: $blue;
+                background-color: $white;
+                border: 1px solid $blue;
+                padding: 4px 9px;
+            }
+        }
+    }
+}
+
+
+/* ============================
+    Media queries
+ ============================= */
 @media only screen and (max-width: 1200px) {
     .commercial-box, .category-box {
         display: none;
