@@ -45,9 +45,9 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="Kategori.aspx?id=1">Animation</a>
-              <a class="dropdown-item" href="Kategori.aspx?id=2">Thriller</a>
-              <a class="dropdown-item" href="Kategori.aspx?id=3">Science Fiction</a>
-              <a class="dropdown-item" href="Kategori.aspx?id=4">Action</a>
+              <a class="dropdown-item" href="Kategori.aspx?id=3">Thriller</a>
+              <a class="dropdown-item" href="Kategori.aspx?id=4">Science Fiction</a>
+              <a class="dropdown-item" href="Kategori.aspx?id=2">Action</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="#">Something else here</a>
             </div>
@@ -89,9 +89,9 @@
                 <hr /> 
                 <ul>
                     <li><a href="Kategori.aspx?id=1"">Animation</a></li>
-                    <li><a href="Kategori.aspx?id=2">Thriller</a></li>
-                    <li><a href="Kategori.aspx?id=3">Science Fiction</a></li>
-                    <li><a href="Kategori.aspx?id=4">Action</a></li>
+                    <li><a href="Kategori.aspx?id=3">Thriller</a></li>
+                    <li><a href="Kategori.aspx?id=4">Science Fiction</a></li>
+                    <li><a href="Kategori.aspx?id=2">Action</a></li>
                 </ul>
             </div>
           </div>

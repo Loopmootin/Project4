@@ -21,8 +21,8 @@ namespace Project4
 
         public void CategoryMovies()
         {
-            SqlConnection conn = new SqlConnection(@"data source = DESKTOP-6CQP77U; integrated security = true; database = MoviesDatabase");
-            // SqlConnection conn = new SqlConnection(@"data source = LAPTOP-A8BTI830; integrated security = true; database = MovieDatabase");
+            //SqlConnection conn = new SqlConnection(@"data source = DESKTOP-6CQP77U; integrated security = true; database = MoviesDatabase");
+            SqlConnection conn = new SqlConnection(@"data source = LAPTOP-A8BTI830; integrated security = true; database = MovieDatabase");
             SqlCommand cmd = null;
             SqlDataReader rdr = null;
 

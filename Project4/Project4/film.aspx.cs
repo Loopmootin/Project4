@@ -40,7 +40,8 @@ namespace Project4
                     {
                         ImagePoster.ImageUrl = mysplit[++i];
 
-                        SqlConnection conn = new SqlConnection(@"Data Source = DESKTOP-6CQP77U; integrated security = true; database = MoviesDatabase");
+                        //SqlConnection conn = new SqlConnection(@"Data Source = DESKTOP-6CQP77U; integrated security = true; database = MoviesDatabase");
+                        SqlConnection conn = new SqlConnection(@"data source = LAPTOP-A8BTI830; integrated security = true; database = MovieDatabase");
                         SqlDataAdapter da = null;
                         DataSet ds = null;
                         DataTable dt = null;
