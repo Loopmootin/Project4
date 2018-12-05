@@ -19,22 +19,30 @@ namespace Project4
         {
             // if the XML uses a namespace, the XSLT must refer to this namespace
             string sourcefile = Server.MapPath("xml/Commercials.xml");
-
             string xslfile = Server.MapPath("xml/CommercialsXSLT.xslt");
-            string xslhtmlfile = Server.MapPath("xml/CommercialToHTML.xslt");
-
             string destinationfile = Server.MapPath("xml/CommercialsTransformed.xml");
-            string destinationhtmlfile = Server.MapPath("xml/CommercialsTransformed.html");
 
-            FileStream fshtml = new FileStream(destinationhtmlfile, FileMode.Create);
-            XslCompiledTransform xcthtml = new XslCompiledTransform();
+            FileStream fs = new FileStream(destinationfile, FileMode.Create);
+            XslCompiledTransform xct = new XslCompiledTransform();
 
-            xcthtml.Load(xslhtmlfile);
-            xcthtml.Transform(sourcefile, null, fshtml);
-            fshtml.Close();
+            xct.Load(xslfile);
+            xct.Transform(sourcefile, null, fs);
+            fs.Close();
 
-            WebClient cl = new WebClient();
-            LiteralHTML.Text = cl.DownloadString(destinationhtmlfile);
+            DataSet ds = new DataSet();
+            ds.ReadXml(destinationfile);
+            DataTable dt = ds.Tables[0];
+
+            Random r = new Random();
+            while (dt.Rows.Count > 1)
+            {
+                int j = r.Next(0, dt.Rows.Count);
+                dt.Rows.RemoveAt(j);
+            }
+
+            GridView1.DataSource = dt;
+            GridView1.DataBind();
+
         }
     }
 }

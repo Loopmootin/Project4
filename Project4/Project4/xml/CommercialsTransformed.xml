@@ -1,7 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Companies>
-  <company></company>
-  <company></company>
-  <company>Rose</company>
-  <company></company>
+  <Company>
+    <Name>Yensid Tlaw</Name>
+    <Logo>logo1.jpg</Logo>
+    <Phone>(111) 22222222</Phone>
+    <Appearance>NaN</Appearance>
+  </Company>
+  <Company>
+    <Name>Tinycomp</Name>
+    <Logo>logo2.jpg</Logo>
+    <Phone>44444444</Phone>
+    <Appearance>NaN</Appearance>
+  </Company>
+  <Company>
+    <Name>Cartoons</Name>
+    <Logo>logo3.jpg</Logo>
+    <Phone>55+ 66666666</Phone>
+    <Appearance>NaN</Appearance>
+  </Company>
+  <Company>
+    <Name>Web Developers</Name>
+    <Logo>logo4.jpg</Logo>
+    <Phone></Phone>
+    <Appearance>NaN</Appearance>
+  </Company>
 </Companies>

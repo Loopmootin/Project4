@@ -11,8 +11,22 @@
   </xsl:template>
 
   <xsl:template match="c:commercial">
-    <xsl:element name="company">
-      <xsl:value-of select="c:directors/c:chiefdirector"/>
+    <xsl:element name="Company">
+      <xsl:element name="Name">
+        <xsl:value-of select="@company"/>
+      </xsl:element>
+      <xsl:element name="Logo">
+        <xsl:value-of select="c:logo"/>
+        <xsl:value-of select="c:ourlogo"/>
+      </xsl:element>
+      <xsl:element name="Phone">
+        <xsl:value-of select="c:telephones/c:telephone"/>
+        <xsl:value-of select="c:telephone"/>
+      </xsl:element>
+      <xsl:element name="Appearance">
+        <xsl:variable name="Appear" />
+        <xsl:value-of select="number($Appear) + 1"/>
+      </xsl:element>
     </xsl:element>
   </xsl:template>
 </xsl:stylesheet>

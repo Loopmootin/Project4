@@ -33,7 +33,7 @@ namespace Project4
 
                 cmd = conn.CreateCommand();
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "MoviesDatabase";
+                cmd.CommandText = "CategorySelection";
 
                 cmd.Parameters.Add("@genre_id", SqlDbType.Int).Value = Request.QueryString["id"];
 
