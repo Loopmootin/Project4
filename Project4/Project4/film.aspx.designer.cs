@@ -22,15 +22,6 @@ namespace Project4 {
         protected global::System.Web.UI.WebControls.Label LabelMessage;
         
         /// <summary>
-        /// LabelResult control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelResult;
-        
-        /// <summary>
         /// Labeltest control.
         /// </summary>
         /// <remarks>
@@ -38,6 +29,42 @@ namespace Project4 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Labeltest;
+        
+        /// <summary>
+        /// LabelRating control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelRating;
+        
+        /// <summary>
+        /// LabelPlot control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelPlot;
+        
+        /// <summary>
+        /// LabelChildRating control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelChildRating;
+        
+        /// <summary>
+        /// LabelActors control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelActors;
         
         /// <summary>
         /// ImagePoster control.

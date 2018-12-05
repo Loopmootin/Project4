@@ -12,7 +12,7 @@
             <ItemTemplate>
                 
                  <div class="top-movie col-3 split-container">
-                 <a href="film.aspx?movie=<%# Eval("movie_name") %>&id=<%# Eval("movie_id") %>">dope</a>
+                 <a href="film.aspx?movie=<%# Eval("movie_name") %>&id=<%# Eval("movie_id") %>&movieyear=<%# Eval("movie_release") %>">Læs Mere</a>
                       <%# Eval("movie_name") %>
                       <%# Eval("movie_release") %>
                      <img src="<%# Eval("poster_url") %>" />

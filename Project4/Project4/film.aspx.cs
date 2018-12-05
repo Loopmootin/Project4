@@ -8,28 +8,32 @@ using System.Web.UI.WebControls;
 using System.Drawing;
 using System.Net;
 using System.IO;
-using System.Xml;
 
 using System.Data;
 using System.Data.SqlClient;
+using Project4.Utilities;
 
 namespace Project4
 {
     public partial class film : System.Web.UI.Page
     {
+        private string[] mysplit;
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            Utilities.MovieDetails newdetail = new MovieDetails();
             WebClient client = new WebClient();
-            string result = "";
             string movieresult = Request.QueryString["movie"];
+            string movieyear = Request.QueryString["movieyear"];
             string movieid = Request.QueryString["id"];
 
 
-            result = client.DownloadString("http://www.omdbapi.com/?s=" + movieresult + "&apikey=" + Token.token + "");
+            newdetail.GetDownloadString(movieresult, movieyear);
 
-            string[] seperatingChars = { "\":\"", "\",\"", "\":[{\"", "\"},{\"", "\"}]\"", "{\"", "\"}" };
-            string[] mysplit = result.Split(seperatingChars, System.StringSplitOptions.RemoveEmptyEntries);
+            mysplit = newdetail.thesplit();
 
+           // string[] seperatingChars = { "\":\"", "\",\"", "\":[{\"", "\"},{\"", "\"}]\"", "{\"", "\"}" };
+           // string[] mysplit = result.Split(seperatingChars, System.StringSplitOptions.RemoveEmptyEntries);
 
             if (mysplit[1] != "False")
             {
@@ -40,14 +44,14 @@ namespace Project4
                     {
                         ImagePoster.ImageUrl = mysplit[++i];
 
-                        //SqlConnection conn = new SqlConnection(@"Data Source = DESKTOP-6CQP77U; integrated security = true; database = MoviesDatabase");
-                        SqlConnection conn = new SqlConnection(@"data source = LAPTOP-A8BTI830; integrated security = true; database = MovieDatabase");
+                        SqlConnection conn = new SqlConnection(@"Data Source = DESKTOP-6CQP77U; integrated security = true; database = MovieDatabase");
+                        // SqlConnection conn = new SqlConnection(@"data source = LAPTOP-A8BTI830; integrated security = true; database = MovieDatabase");
                         SqlDataAdapter da = null;
                         DataSet ds = null;
                         DataTable dt = null;
                         SqlCommand cmd = null;
-                        string sqlsel = "select * from Movies";
-                        string sqlupd = "update Movies set movies.poster_url = @poster_url Where movies.movie_id = @movie_id";
+                        string sqlsel = "select * from Movie";
+                        string sqlupd = "update Movie set movie.poster_url = @poster_url Where movie.movie_id = @movie_id";
 
                         try
                         {
@@ -58,8 +62,6 @@ namespace Project4
                             da.Fill(ds, "MoviePoster");
 
                             dt = ds.Tables["MoviePoster"];
-
-                            Labeltest.Text = Request.QueryString["id"];
 
                             int requestid = Convert.ToInt32(Request.QueryString["id"]);
 
@@ -86,28 +88,50 @@ namespace Project4
                         }
                         break;
                     }
-                }
-                LabelResult.Text = "Ratings ";
+                }               
+                LabelRating.Text = "Ratings ";
                 for (int i = 0; i < mysplit.Length; i++)
                 {
                     if (mysplit[i] == "Ratings")
                     {
                         while (mysplit[++i] == "Source")
                         {
-                            if (mysplit[i - 1] != "Ratings") LabelResult.Text += "; ";
-                            LabelResult.Text += mysplit[i + 3] + " From " + mysplit[i + 1];
+                            if (mysplit[i - 1] != "Ratings") LabelRating.Text += "; ";
+                            LabelRating.Text += mysplit[i + 3] + " From " + mysplit[i + 1];
                         }
                         i = i + 3;
                         break;
                     }
+                }
+                LabelPlot.Text = "Plot : ";
+                for (int i = 0; i < mysplit.Length; i++)
+                {
+                    if (mysplit[i] == "Plot")
+                    {
+                        LabelPlot.Text = mysplit[++i];
+                        break;
+                    }
+                }
 
+                LabelChildRating.Text = "Rated : ";
+                newdetail.Detail(mysplit, "Rated", LabelChildRating.Text);
+
+
+                LabelActors.Text = "Actors : ";
+                for (int i = 0; i < mysplit.Length; i++)
+                {
+                    if (mysplit[i] == "Actors")
+                    {
+                        LabelActors.Text = mysplit[++i];
+                        break;
+                    }
                 }
             }
             else
             {
                 LabelMessage.Text = "Movie Not Found";
                 ImagePoster.ImageUrl = "~/MyFiles/gaurdiansofthegolaxsi.jpg";
-                LabelResult.Text = "Empty";
+                LabelRating.Text = "Empty";
             }
         }
     }

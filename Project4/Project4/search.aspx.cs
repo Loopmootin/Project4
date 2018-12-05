@@ -24,25 +24,15 @@ namespace Project4
 
         public void SearchedMovies()
         {
-            //SqlConnection conn = new SqlConnection(@"data source = DESKTOP-6CQP77U; integrated security = true; database = MoviesDatabase");
-            SqlConnection conn = new SqlConnection(@"data source = LAPTOP-A8BTI830; integrated security = true; database = MovieDatabase");
-            SqlCommand cmd = null;
-            SqlDataReader rdr = null;
-
+            Utility connection = new Utility();
 
             try
             {
-                conn.Open();
 
-                cmd = conn.CreateCommand();
-                cmd.CommandText = "SELECT DISTINCT * FROM [Movies] WHERE ([movie_name] LIKE '%' + @movie_name + '%')";
-                cmd.CommandType = CommandType.Text;
+                connection.createCommand("SELECT * FROM [Movie] WHERE ([movie_name] LIKE '%' + @movie_name + '%')", CommandType.Text);
+                connection.AddParameter("@movie_name", SqlDbType.VarChar).Value = Request.QueryString["searchresult"];
 
-                cmd.Parameters.Add("@movie_name", SqlDbType.VarChar).Value = Request.QueryString["searchresult"];
-
-                rdr = cmd.ExecuteReader();
-
-                RepeaterSearch.DataSource = rdr;
+                RepeaterSearch.DataSource = connection.executeCmd();
                 RepeaterSearch.DataBind();
 
 
@@ -50,10 +40,6 @@ namespace Project4
             catch (Exception ex)
             {
                 LabelMessage.Text = ex.Message;
-            }
-            finally
-            {
-                conn.Close();
             }
         }
     }
