@@ -25,16 +25,6 @@ namespace Project4
 
             try
             {
-<<<<<<< HEAD
-                conn.Open();
-
-                cmd = conn.CreateCommand();
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "CategorySelection";
-=======
->>>>>>> b8d42bc944af422f2909c0ad5d3505ac2be9d97a
-
-
                 connect.createCommand("CategorySelection", CommandType.StoredProcedure);
                 connect.AddParameter("@genre_id", SqlDbType.Int).Value = Request.QueryString["id"];
 
