@@ -35,6 +35,7 @@
                 
                  <div class="top-movie col-3 split-container">
                     <%# Eval("movie_name") %>
+                     <%# Eval("movie_release") %>
                 </div>
               
             </ItemTemplate>

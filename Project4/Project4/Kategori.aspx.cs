@@ -21,25 +21,24 @@ namespace Project4
 
         public void CategoryMovies()
         {
-            //SqlConnection conn = new SqlConnection(@"data source = DESKTOP-6CQP77U; integrated security = true; database = MoviesDatabase");
-            SqlConnection conn = new SqlConnection(@"data source = LAPTOP-A8BTI830; integrated security = true; database = MovieDatabase");
-            SqlCommand cmd = null;
-            SqlDataReader rdr = null;
-
+            Utility connect = new Utility();
 
             try
             {
+<<<<<<< HEAD
                 conn.Open();
 
                 cmd = conn.CreateCommand();
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "CategorySelection";
+=======
+>>>>>>> b8d42bc944af422f2909c0ad5d3505ac2be9d97a
 
-                cmd.Parameters.Add("@genre_id", SqlDbType.Int).Value = Request.QueryString["id"];
 
-                rdr = cmd.ExecuteReader();
+                connect.createCommand("CategorySelection", CommandType.StoredProcedure);
+                connect.AddParameter("@genre_id", SqlDbType.Int).Value = Request.QueryString["id"];
 
-                RepeaterMovies.DataSource = rdr;
+                RepeaterMovies.DataSource = connect.executeCmd();
                 RepeaterMovies.DataBind();
 
 
@@ -48,10 +47,7 @@ namespace Project4
             {
                 LabelMessage.Text = ex.Message;
             }
-            finally
-            {
-                conn.Close();
-            }
+
         }
     }
 }

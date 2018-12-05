@@ -6,14 +6,22 @@
         <asp:Label ID="LabelMessage" runat="server" Text="Label"></asp:Label>
         <br />
     </p>
-    <p>
-        <asp:Label ID="LabelResult" runat="server" Text="Label"></asp:Label>
-    </p>
-    <p>
         <asp:Label ID="Labeltest" runat="server" Text="Label"></asp:Label>
+    <br />
+    <br />
+    -----<br />
+    <p>
+        <asp:Label ID="LabelRating" runat="server" Text="Label"></asp:Label>
     </p>
     <p>
-        &nbsp;</p>
+        <asp:Label ID="LabelPlot" runat="server" Text="Plot"></asp:Label>
+    </p>
+    <p>
+        <asp:Label ID="LabelChildRating" runat="server" Text="Child Rating"></asp:Label>
+    </p>
+    <p>
+        <asp:Label ID="LabelActors" runat="server" Text="Actors"></asp:Label>
+    </p>
     <p>
         <asp:Image ID="ImagePoster" runat="server" />
     </p>
