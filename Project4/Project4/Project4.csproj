@@ -68,7 +68,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App_Themes\styles\master.scss" />
-    <Content Include="AdminPage.aspx" />
     <Content Include="App_Themes\styles\master.css">
       <DependentUpon>master.scss</DependentUpon>
     </Content>
@@ -83,13 +82,6 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminPage.aspx.cs">
-      <DependentUpon>AdminPage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AdminPage.aspx.designer.cs">
-      <DependentUpon>AdminPage.aspx</DependentUpon>
-    </Compile>
     <Compile Include="film.aspx.cs">
       <DependentUpon>film.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
