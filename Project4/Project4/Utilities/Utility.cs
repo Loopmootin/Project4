@@ -11,7 +11,6 @@ namespace Project4
     public class Utility
     {
         private SqlConnection conn;
-        //SqlConnection conn = new SqlConnection(@"data source = LAPTOP-A8BTI830; integrated security = true; database = MovieDatabase");
         private SqlCommand cmd;
         private SqlDataReader rdr;
         private SqlDataAdapter da = null;
@@ -20,8 +19,8 @@ namespace Project4
 
         public Utility()
         {
-            conn = new SqlConnection(@"data source = DESKTOP-6CQP77U; integrated security = true; database = MovieDatabase");
-            //SqlConnection conn = new SqlConnection(@"data source = LAPTOP-A8BTI830; integrated security = true; database = MovieDatabase");
+            //conn = new SqlConnection(@"data source = DESKTOP-6CQP77U; integrated security = true; database = MovieDatabase");
+            conn = new SqlConnection(@"data source = LAPTOP-A8BTI830; integrated security = true; database = MovieDatabase");
             cmd = null;
             rdr = null;
             conn.Open();
