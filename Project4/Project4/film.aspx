@@ -3,23 +3,12 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderBody" runat="server">
     <p>
-        <asp:Label ID="LabelMessage" runat="server" Text="Label"></asp:Label>
+        <asp:Label ID="LabelPG" runat="server" Text="PG-Rating"></asp:Label>
         <br />
     </p>
-        <asp:Label ID="Labeltest" runat="server" Text="Label"></asp:Label>
+        <asp:Label ID="LabelRatings" runat="server" Text="Ratings"></asp:Label>
     <br />
-    <asp:Label ID="Labelhasread" runat="server" Text="Label"></asp:Label>
     <br />
-    <asp:Label ID="LabelDATE" runat="server" Text="Label"></asp:Label>
-    <br />
-    <asp:Label ID="Labeltestlabel2" runat="server" Text="Label"></asp:Label>
-    <br />
-    -----<br />
-    <asp:ListBox ID="ListBox" runat="server" Height="156px" Width="357px"></asp:ListBox>
-    <br />
-    <p>
-        <asp:Label ID="LabelRating" runat="server" Text="Label"></asp:Label>
-    </p>
     <p>
         <asp:Label ID="LabelPlot" runat="server" Text="Plot"></asp:Label>
     </p>

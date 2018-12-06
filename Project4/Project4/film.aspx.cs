@@ -21,12 +21,18 @@ namespace Project4
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            Utilities.MovieDetails newdetail = new MovieDetails();
+            // string[] seperatingChars = { "\":\"", "\",\"", "\":[{\"", "\"},{\"", "\"}]\"", "{\"", "\"}" };
+            // string[] mysplit = result.Split(seperatingChars, System.StringSplitOptions.RemoveEmptyEntries);
+
             WebClient client = new WebClient();
             string movieresult = Request.QueryString["movie"];
             string movieyear = Request.QueryString["movieyear"];
             string movieid = Request.QueryString["id"];
 
+<<<<<<< HEAD
+            Utilities.MovieDetails details = new MovieDetails();
+            details.Clicked(movieid);
+=======
             //SqlConnection conn = new SqlConnection(@"data source = DESKTOP-6CQP77U;  integrated security = true; database = MovieDatabase");
             SqlConnection conn = new SqlConnection(@"data source = LAPTOP-A8BTI830; integrated security = true; database = MovieDatabase");
             SqlDataReader rdr = null;
@@ -121,65 +127,17 @@ namespace Project4
                             cmd.Parameters.Add("@movie_id", SqlDbType.Int, 50, "movie_id");
                             cmd.Parameters.Add("@poster_url", SqlDbType.Text, 255, "poster_url");
 
+>>>>>>> master
 
-                            da.UpdateCommand = cmd;
-                            da.Update(ds, "MoviePoster");                        
-                        }
-                        catch (Exception ex)
-                        {
-                            LabelMessage.Text = ex.Message;
-                        }
-                        finally
-                        {
-                            conn.Close();
-                        }
-                        break;
-                    }
-                }               
-                LabelRating.Text = "Ratings ";
-                for (int i = 0; i < mysplit.Length; i++)
-                {
-                    if (mysplit[i] == "Ratings")
-                    {
-                        while (mysplit[++i] == "Source")
-                        {
-                            if (mysplit[i - 1] != "Ratings") LabelRating.Text += "; ";
-                            LabelRating.Text += mysplit[i + 3] + " From " + mysplit[i + 1];
-                        }
-                        i = i + 3;
-                        break;
-                    }
-                }
-                LabelPlot.Text = "Plot : ";
-                for (int i = 0; i < mysplit.Length; i++)
-                {
-                    if (mysplit[i] == "Plot")
-                    {
-                        LabelPlot.Text = mysplit[++i];
-                        break;
-                    }
-                }
-
-                //LabelChildRating.Text = "Rated : ";
-                //newdetail.Detail(mysplit, "Rated", LabelChildRating.Text);
+            Utilities.MovieDetails newdetail = new MovieDetails(movieid, movieresult, movieyear);
 
 
-                LabelActors.Text = "Actors : ";
-                for (int i = 0; i < mysplit.Length; i++)
-                {
-                    if (mysplit[i] == "Actors")
-                    {
-                        LabelActors.Text = mysplit[++i];
-                        break;
-                    }
-                }
-            }
-            else
-            {
-                LabelMessage.Text = "Movie Not Found";
-                ImagePoster.ImageUrl = "~/MyFiles/gaurdiansofthegolaxsi.jpg";
-                LabelRating.Text = "Empty";
-            }
+
+            ImagePoster.ImageUrl = newdetail.Imageposter(movieid);
+            LabelActors.Text = newdetail.Actors();
+            LabelPlot.Text = newdetail.ThePlot();
+            LabelRatings.Text = newdetail.Ratings();
+            LabelPG.Text = newdetail.PGrated();
         }
     }
 }
