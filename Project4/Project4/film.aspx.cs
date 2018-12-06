@@ -31,6 +31,8 @@ namespace Project4
 
             Utilities.MovieDetails newdetail = new MovieDetails(movieid, movieresult, movieyear);
 
+
+            newdetail.Clicked(movieid);
             ImagePoster.ImageUrl = newdetail.Imageposter(movieid);
             LabelActors.Text = newdetail.Actors();
             LabelPlot.Text = newdetail.ThePlot();
