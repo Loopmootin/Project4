@@ -79,6 +79,7 @@
     <Content Include="Index.aspx" />
     <Content Include="Kategori.aspx" />
     <Content Include="search.aspx" />
+    <Content Include="test.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -118,7 +119,15 @@
     <Compile Include="search.aspx.designer.cs">
       <DependentUpon>search.aspx</DependentUpon>
     </Compile>
+    <Compile Include="test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Utilities\ArticleDetails.cs" />
+    <Compile Include="Utilities\insertallmovies.cs" />
     <Compile Include="Utilities\MovieDetails.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>

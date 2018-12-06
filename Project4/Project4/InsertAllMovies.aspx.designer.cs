@@ -10,15 +10,15 @@
 namespace Project4 {
     
     
-    public partial class Kategori {
+    public partial class test {
         
         /// <summary>
-        /// RepeaterMovies control.
+        /// testlabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater RepeaterMovies;
+        protected global::System.Web.UI.WebControls.Label testlabel;
     }
 }

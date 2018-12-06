@@ -21,15 +21,13 @@ namespace Project4.Utilities
         public string movieid;
         public static string[] mysplit;
 
-        WebClient client; 
-        string result = "";
+        public readonly string plot;
+        public readonly string image;
+        public readonly string actor;
+        public readonly string rating;
+        public readonly string pgrated;
 
-        public string GetDownloadString(string movieresult, string movieyear)
-        {
-            WebClient client = new WebClient();
-            result = client.DownloadString("http://www.omdbapi.com/?t=" + movieresult + "&y=" + movieyear + "&apikey=" + Token.token + "");
-            return result;
-        }
+        public string result = "";
 
         public string[] thesplit()
         {
@@ -45,8 +43,8 @@ namespace Project4.Utilities
 
         public void Clicked(string movieid)
         {
-            //SqlConnection conn = new SqlConnection(@"data source = DESKTOP-6CQP77U;  integrated security = true; database = MovieDatabase");
-            SqlConnection conn = new SqlConnection(@"data source = LAPTOP-A8BTI830; integrated security = true; database = MovieDatabase");
+            SqlConnection conn = new SqlConnection(@"data source = DESKTOP-6CQP77U;  integrated security = true; database = MovieDatabase");
+            // SqlConnection conn = new SqlConnection(@"data source = LAPTOP-A8BTI830; integrated security = true; database = MovieDatabase");
             SqlDataReader rdr = null;
             try
             {
@@ -105,8 +103,8 @@ namespace Project4.Utilities
             DataTable dt = null;
             string sqlsel = "select * from Movie";
             string sqlupd = "update Movie set movie.poster_url = @poster_url Where movie.movie_id = @movie_id";
-            //SqlConnection conn = new SqlConnection(@"data source = DESKTOP-6CQP77U;  integrated security = true; database = MovieDatabase");
-            SqlConnection conn = new SqlConnection(@"data source = LAPTOP-A8BTI830; integrated security = true; database = MovieDatabase");
+            SqlConnection conn = new SqlConnection(@"data source = DESKTOP-6CQP77U;  integrated security = true; database = MovieDatabase");
+            // SqlConnection conn = new SqlConnection(@"data source = LAPTOP-A8BTI830; integrated security = true; database = MovieDatabase");
             conn.Open();
             try
             {
@@ -146,11 +144,17 @@ namespace Project4.Utilities
 
         public MovieDetails(string movie_id, string movieresult, string movieyear)
         {
-           GetDownloadString(movieresult, movieyear);           
+            WebClient client = new WebClient();
+            result = client.DownloadString("http://www.omdbapi.com/?t=" + movieresult + "&y=" + movieyear + "&apikey=" + Token.token + "");
+            plot = ThePlot();
+            image = Imageposter(movie_id);
+            actor = Actors();
+            rating = Ratings();
+            pgrated = PGrated();
         }
 
 
-        public string Imageposter(string movieid)
+        private string Imageposter(string movieid)
         {
             string imageposter = "";
             mysplit = thesplit();
@@ -169,7 +173,7 @@ namespace Project4.Utilities
             return imageposter;
         }
 
-        public string ThePlot()
+        private string ThePlot()
         {
             string plot = "";
             mysplit = thesplit();
@@ -187,7 +191,7 @@ namespace Project4.Utilities
             return plot;
         }
 
-        public string Actors()
+        private string Actors()
         {
             string actor = "";
             mysplit = thesplit();
@@ -205,7 +209,7 @@ namespace Project4.Utilities
             return actor;
         }
 
-        public string Ratings()
+        private string Ratings()
         {
             string rating = "";
             mysplit = thesplit();
@@ -228,7 +232,7 @@ namespace Project4.Utilities
             return rating;
         }
 
-        public string PGrated()
+        private string PGrated()
         {
             string rated = "";
             mysplit = thesplit();

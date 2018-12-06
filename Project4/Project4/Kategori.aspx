@@ -3,12 +3,8 @@
     <title>Fucking Film - Kategori</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderBody" runat="server">
-    <asp:Repeater ID="RepeaterMovies" runat="server">
-         <HeaderTemplate>
-            <table class="show-pest">
-                <div class="container">  
-
-                    <div class="category-selection">
+       <div class="category-selection">
+           <div class="container">     
                         <div class="category-selection-category">
                             <a class="category-selector" href="Kategori.aspx?id=1"">Animation</a>
                             <a class="category-selector" href="Kategori.aspx?id=3">Thriller</a>
@@ -17,25 +13,29 @@
                         </div>
                         <hr />
                         <div class="category-selection-year">
-                            <a class="category-selector" href="Kategori.aspx?id=1"">2010</a>
-                            <a class="category-selector" href="Kategori.aspx?id=3">2011</a>
-                            <a class="category-selector" href="Kategori.aspx?id=4">2012</a>
-                            <a class="category-selector" href="Kategori.aspx?id=2">2013</a>
-                            <a class="category-selector" href="Kategori.aspx?id=2">2014</a>
-                            <a class="category-selector" href="Kategori.aspx?id=2">2015</a>
-                            <a class="category-selector" href="Kategori.aspx?id=2">2016</a>
-                            <a class="category-selector" href="Kategori.aspx?id=2">2017</a>
-                            <a class="category-selector" href="Kategori.aspx?id=2">2018</a>
+                            <a class="category-selector" href="Kategori.aspx?movieyear=2010">2010</a>
+                            <a class="category-selector" href="Kategori.aspx?movieyear=2011">2011</a>
+                            <a class="category-selector" href="Kategori.aspx?movieyear=2012">2012</a>
+                            <a class="category-selector" href="Kategori.aspx?movieyear=2013">2013</a>
+                            <a class="category-selector" href="Kategori.aspx?movieyear=2014">2014</a>
+                            <a class="category-selector" href="Kategori.aspx?movieyear=2015">2015</a>
+                            <a class="category-selector" href="Kategori.aspx?movieyear=2016">2016</a>
+                            <a class="category-selector" href="Kategori.aspx?movieyear=2017">2017</a>
+                            <a class="category-selector" href="Kategori.aspx?movieyear=2018">2018</a>
                         </div>
                     </div>
-
+           </div>
+    <asp:Repeater ID="RepeaterMovies" runat="server">
+         <HeaderTemplate>
+                <div class="container">                 
                     <div class="row justify-content-md-center">
         </HeaderTemplate>
             <ItemTemplate>
                 
                  <div class="top-movie col-3 split-container">
-                    <%# Eval("movie_name") %>
+                  <a href="film.aspx?movie=<%# Eval("movie_name") %>&id=<%# Eval("movie_id") %>&movieyear=<%# Eval("movie_release") %>"><%# Eval("movie_name") %>
                      <%# Eval("movie_release") %>
+                     <img src="<%# Eval("poster_url") %>" /></a>
                 </div>
               
             </ItemTemplate>
@@ -45,6 +45,6 @@
             </FooterTemplate>
     </asp:Repeater>
 
-    <asp:Label ID="LabelMessage" runat="server" Text="Label"></asp:Label>
+    
     
 </asp:Content>

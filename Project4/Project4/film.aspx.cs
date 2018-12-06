@@ -17,12 +17,13 @@ namespace Project4
 {
     public partial class film : System.Web.UI.Page
     {
-        private string[] mysplit;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            // string[] seperatingChars = { "\":\"", "\",\"", "\":[{\"", "\"},{\"", "\"}]\"", "{\"", "\"}" };
-            // string[] mysplit = result.Split(seperatingChars, System.StringSplitOptions.RemoveEmptyEntries);
+            if (Request.QueryString["id"] == null)
+            {
+                Response.Redirect("index.aspx");
+            }
 
             WebClient client = new WebClient();
             string movieresult = Request.QueryString["movie"];
@@ -33,11 +34,11 @@ namespace Project4
 
 
             newdetail.Clicked(movieid);
-            ImagePoster.ImageUrl = newdetail.Imageposter(movieid);
-            LabelActors.Text = newdetail.Actors();
-            LabelPlot.Text = newdetail.ThePlot();
-            LabelRatings.Text = newdetail.Ratings();
-            LabelPG.Text = newdetail.PGrated();
+            ImagePoster.ImageUrl = newdetail.image;
+            LabelActors.Text = newdetail.actor;
+            LabelPlot.Text = newdetail.plot;
+            LabelRatings.Text = newdetail.rating;
+            LabelPG.Text = newdetail.pgrated;
         }
     }
 }

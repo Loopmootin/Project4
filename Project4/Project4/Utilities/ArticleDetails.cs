@@ -12,7 +12,7 @@ namespace Project4.Utilities
         public string articleresult;
         public static string[] articlesplit;
 
-        WebClient client;
+        // WebClient client;
         string result = "";
 
         public string GetDownloadArticleString(string articleresult)

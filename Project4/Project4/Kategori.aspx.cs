@@ -14,8 +14,20 @@ namespace Project4
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Request.QueryString["id"] == null)
+            {
+                Utility AllVideos = new Utility();
+                AllVideos.createCommand("SELECT TOP 80 * FROM Movie", CommandType.Text);
+                RepeaterMovies.DataSource = AllVideos.executeCmd();
+                RepeaterMovies.DataBind();
+            }
+                MovieYear();
+                CategoryMovies();
 
-        CategoryMovies();
+
+            
+       
+   
 
         }
 
@@ -30,14 +42,32 @@ namespace Project4
 
                 RepeaterMovies.DataSource = connect.executeCmd();
                 RepeaterMovies.DataBind();
+            }
+            catch (Exception ex)
+            {
+               // LabelMessage.Text = ex.Message;
+            }
+        }
 
+        public void MovieYear()
+        {
+            Utility connect = new Utility();
+
+            try
+            {
+                connect.createCommand("SELECT Top 40 * FROM movie where movie_release = @movie_release", CommandType.Text);
+                connect.AddParameter("@movie_release", SqlDbType.Int).Value = Request.QueryString["movieyear"];
+                RepeaterMovies.DataSource = connect.executeCmd();
+                RepeaterMovies.DataBind();
 
             }
             catch (Exception ex)
             {
-                LabelMessage.Text = ex.Message;
+                // LabelMessage.Text = ex.Message;
             }
 
+
         }
+
     }
 }
