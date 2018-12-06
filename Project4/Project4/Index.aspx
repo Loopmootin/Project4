@@ -7,17 +7,20 @@
 
         <div class="justify-content-md-center">
             <h2>Top film</h2>
-            <div class="top-movies-container col-12 justify-content-around row">
-                <div class="top-movie col-3 split-container">
-                    <img src="Pictures/queen.jpg" alt="movie poster" />
-                </div>
-                <div class="top-movie col-3 split-container">
-                    <img src="Pictures/avatar.jpg" alt="movie poster" />
-                </div>
-                <div class="top-movie col-3 split-container">
-                    <img src="Pictures/fantastic-beasts.jpg" alt="movie poster" />
-                </div>
-            </div>
+                <asp:Repeater ID="RepeaterTop" runat="server">
+                    <HeaderTemplate>
+                               <div class="top-movies-container col-12 justify-content-around row">
+                    </HeaderTemplate>
+                    <ItemTemplate>
+                        <div class="top-movie col-3 split-container">
+                        <img src="<%# Eval("poster_url") %>" alt="movie poster" />
+                        </div>
+                    </ItemTemplate>
+                    <FooterTemplate>
+                
+                       </div>
+                    </FooterTemplate>
+               </asp:Repeater>
             <h2>Nye film</h2>
             <div class="new-movies-container col-12 justify-content-around row">
                 <div class="new-movie col-3 split-container">
@@ -30,7 +33,7 @@
 
                 </div>
             </div>
-            <h2>Artikler</h2>
+            <h2>Artikler     <h2>Artikler</h2>
             <div class="articles-container col-12 justify-content-around row">
                 <div class="movie-article col-3 split-container">
 
