@@ -16,16 +16,6 @@ namespace Project4.Utilities
 {
     public class MovieDetails : System.Web.UI.Page
     {
-<<<<<<< HEAD
-        private string movie_name;
-        private int movie_release;
-        private string poster_url;
-        private string description;
-        private string child_rating;
-        private string rating;
-
-=======
->>>>>>> b628799dc80219dfa3364d213b7475c96622dcff
         public string movieresult;
         public string movieyear;
         public string movieid;
@@ -55,7 +45,8 @@ namespace Project4.Utilities
 
         public void Clicked(string movieid)
         {
-            SqlConnection conn = new SqlConnection(@"data source = DESKTOP-6CQP77U;  integrated security = true; database = MovieDatabase");
+            //SqlConnection conn = new SqlConnection(@"data source = DESKTOP-6CQP77U;  integrated security = true; database = MovieDatabase");
+            SqlConnection conn = new SqlConnection(@"data source = LAPTOP-A8BTI830; integrated security = true; database = MovieDatabase");
             SqlDataReader rdr = null;
             try
             {
@@ -108,13 +99,14 @@ namespace Project4.Utilities
 
         public void SavePoster(string ImagePoster, string movie_id)
         {
-            // SqlConnection conn = new SqlConnection(@"data source = LAPTOP-A8BTI830; integrated security = true; database = MovieDatabase");
+
             SqlDataAdapter da = null;
             DataSet ds = null;
             DataTable dt = null;
             string sqlsel = "select * from Movie";
             string sqlupd = "update Movie set movie.poster_url = @poster_url Where movie.movie_id = @movie_id";
-            SqlConnection conn = new SqlConnection(@"data source = DESKTOP-6CQP77U;  integrated security = true; database = MovieDatabase");
+            //SqlConnection conn = new SqlConnection(@"data source = DESKTOP-6CQP77U;  integrated security = true; database = MovieDatabase");
+            SqlConnection conn = new SqlConnection(@"data source = LAPTOP-A8BTI830; integrated security = true; database = MovieDatabase");
             conn.Open();
             try
             {
