@@ -13,7 +13,7 @@
                     </HeaderTemplate>
                     <ItemTemplate>
                         <div class="top-movie col-3 split-container">
-                        <img src="<%# Eval("poster_url") %>" alt="movie poster" />
+                            <img src="<%# Eval("poster_url") %>" alt="movie poster" />
                         </div>
                     </ItemTemplate>
                     <FooterTemplate>
@@ -33,18 +33,8 @@
 
                 </div>
             </div>
-            <h2>Artikler     <h2>Artikler</h2>
-            <div class="articles-container col-12 justify-content-around row">
-                <div class="movie-article col-3 split-container">
-
-                </div>
-                <div class="movie-article col-3 split-container">
-
-                </div>
-                <div class="movie-article col-3 split-container">
-
-                </div>
-            </div>
+            <h2>Artikler</h2>
+            <asp:Label ID="LabelArticle" runat="server" Text="Label"></asp:Label>
         </div>
     </div>
 </asp:Content>

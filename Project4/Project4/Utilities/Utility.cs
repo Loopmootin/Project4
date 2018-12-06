@@ -26,10 +26,10 @@ namespace Project4
             conn.Open();
         }
 
-        //~Utility() {
+        ~Utility() {
 
-          //  conn.Close();
-        //}
+          conn.Close();
+        }
 
         public void mysql(string sqlsel, string sqlupd)
         {

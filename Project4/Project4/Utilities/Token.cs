@@ -9,4 +9,9 @@ namespace Project4
     {
         public static string token = "5b359aa9";
     }
+
+    public class ArticleToken
+    {
+        public static string articletoken = "6ce6160fae2b4878bd4320d940679489";
+    }
 }

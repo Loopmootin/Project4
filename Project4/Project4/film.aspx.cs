@@ -58,7 +58,7 @@ namespace Project4
                     cmd.Parameters.Add("@click", SqlDbType.Int).Value = newvalue;
                     cmd.ExecuteNonQuery();
                     // Labeltestlabel2.Text = "Clicks opdateret";
-
+                    
                 } else
                 {
                     cmd.Parameters.Clear();

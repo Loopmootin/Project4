@@ -118,6 +118,7 @@
     <Compile Include="search.aspx.designer.cs">
       <DependentUpon>search.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Utilities\ArticleDetails.cs" />
     <Compile Include="Utilities\MovieDetails.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>

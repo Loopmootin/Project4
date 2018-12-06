@@ -22,8 +22,6 @@ namespace Project4.Utilities
         private string child_rating;
         private string rating;
 
-
-
         public string movieresult;
         public string movieyear;
         public string movieid;
