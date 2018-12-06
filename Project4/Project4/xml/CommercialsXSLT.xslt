@@ -23,10 +23,6 @@
         <xsl:value-of select="c:telephones/c:telephone"/>
         <xsl:value-of select="c:telephone"/>
       </xsl:element>
-      <xsl:element name="Appearance">
-        <xsl:variable name="Appear" />
-        <xsl:value-of select="number($Appear) + 1"/>
-      </xsl:element>
     </xsl:element>
   </xsl:template>
 </xsl:stylesheet>
