@@ -27,9 +27,57 @@ namespace Project4
             string movieyear = Request.QueryString["movieyear"];
             string movieid = Request.QueryString["id"];
 
+            SqlConnection conn = new SqlConnection(@"data source = DESKTOP-6CQP77U;  integrated security = true; database = MovieDatabase");
+            SqlDataReader rdr = null;
+
+            try
+            {
+                conn.Open();
+                string sqlcheck = "SELECT * FROM clicks WHERE movie_id = @movie_id AND date = @date";
+                SqlCommand cmd = new SqlCommand(sqlcheck, conn);
+                cmd.Parameters.Add("@movie_id", SqlDbType.Int, 50, "movie_id").Value = Request.QueryString["id"];
+                cmd.Parameters.Add("@date", SqlDbType.Date).Value = DateTime.Now.ToString("yyyy-dd-MM");
+                int newvalue = 0;
+                using (rdr = cmd.ExecuteReader())
+                {
+                    while(rdr.Read())
+                    {
+                        newvalue = rdr.GetInt32(3);
+                        newvalue += 1;
+                        // Labeltestlabel2.Text = newvalue.ToString();
+                        
+                    }
+                } 
+                if(newvalue != 0)
+                {
+                    cmd.Parameters.Clear();
+                    cmd.CommandText = "UPDATE Clicks set click = @click Where movie_id = @movie_ids AND date = @date;";
+                    cmd.Parameters.Add("@movie_ids", SqlDbType.Int, 50, "movie_id").Value = Request.QueryString["id"];
+                    cmd.Parameters.Add("@date", SqlDbType.Date).Value = DateTime.Now.ToString("yyyy-dd-MM");
+                    cmd.Parameters.Add("@click", SqlDbType.Int).Value = newvalue;
+                    cmd.ExecuteNonQuery();
+                    // Labeltestlabel2.Text = "Clicks opdateret";
+
+                } else
+                {
+                    cmd.Parameters.Clear();
+                    cmd.CommandText = "INSERT INTO clicks(movie_id, date, click) VALUES(@movie_id, @date, 1)";
+                    cmd.Parameters.Add("@movie_id", SqlDbType.Int, 50, "movie_id").Value = Request.QueryString["id"];
+                    cmd.Parameters.Add("@date", SqlDbType.Date).Value = DateTime.Now.ToString("yyyy-dd-MM");
+                    cmd.ExecuteNonQuery();
+                    // LabelDATE.Text = DateTime.Now.ToString("yyyy-dd-MM");
+                }
+            }
+            catch (Exception ex)
+            {
+                LabelDATE.Text = ex.Message;
+            }
+            finally
+            {
+                conn.Close();
+            }
 
             newdetail.GetDownloadString(movieresult, movieyear);
-
             mysplit = newdetail.thesplit();
 
            // string[] seperatingChars = { "\":\"", "\",\"", "\":[{\"", "\"},{\"", "\"}]\"", "{\"", "\"}" };
@@ -44,12 +92,10 @@ namespace Project4
                     {
                         ImagePoster.ImageUrl = mysplit[++i];
 
-                        SqlConnection conn = new SqlConnection(@"Data Source = DESKTOP-6CQP77U; integrated security = true; database = MovieDatabase");
                         // SqlConnection conn = new SqlConnection(@"data source = LAPTOP-A8BTI830; integrated security = true; database = MovieDatabase");
                         SqlDataAdapter da = null;
                         DataSet ds = null;
                         DataTable dt = null;
-                        SqlCommand cmd = null;
                         string sqlsel = "select * from Movie";
                         string sqlupd = "update Movie set movie.poster_url = @poster_url Where movie.movie_id = @movie_id";
 
@@ -67,10 +113,10 @@ namespace Project4
 
                             dt.Rows[requestid]["movie_id"] = Request.QueryString["id"];
                             dt.Rows[requestid]["poster_url"] = ImagePoster.ImageUrl;
-    
-                            
 
-                            cmd = new SqlCommand(sqlupd, conn);
+
+
+                            SqlCommand cmd = new SqlCommand(sqlupd, conn);
                             cmd.Parameters.Add("@movie_id", SqlDbType.Int, 50, "movie_id");
                             cmd.Parameters.Add("@poster_url", SqlDbType.Text, 255, "poster_url");
 
@@ -113,8 +159,8 @@ namespace Project4
                     }
                 }
 
-                LabelChildRating.Text = "Rated : ";
-                newdetail.Detail(mysplit, "Rated", LabelChildRating.Text);
+                //LabelChildRating.Text = "Rated : ";
+                //newdetail.Detail(mysplit, "Rated", LabelChildRating.Text);
 
 
                 LabelActors.Text = "Actors : ";

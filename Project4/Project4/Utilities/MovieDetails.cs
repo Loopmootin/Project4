@@ -39,7 +39,6 @@ namespace Project4.Utilities
             return result;
         }
 
-
         public string[] thesplit()
         {
             string[] seperatingChars = { "\":\"", "\",\"", "\":[{\"", "\"},{\"", "\"}]\"", "{\"", "\"}" };
@@ -47,19 +46,6 @@ namespace Project4.Utilities
             return mysplit;
         }
 
-        public void Detail(string[] mysplit, string detail, string labelname)
-        {
-
-            labelname = "Rated : ";
-            for (int i = 0; i < mysplit.Length; i++)
-            {
-                if (mysplit[i] == detail)
-                {
-                    labelname = mysplit[++i];
-                    break;
-                }
-            }
-        }
-
+     
     }
 }

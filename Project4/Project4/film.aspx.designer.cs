@@ -31,6 +31,42 @@ namespace Project4 {
         protected global::System.Web.UI.WebControls.Label Labeltest;
         
         /// <summary>
+        /// Labelhasread control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Labelhasread;
+        
+        /// <summary>
+        /// LabelDATE control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelDATE;
+        
+        /// <summary>
+        /// Labeltestlabel2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Labeltestlabel2;
+        
+        /// <summary>
+        /// ListBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListBox ListBox;
+        
+        /// <summary>
         /// LabelRating control.
         /// </summary>
         /// <remarks>
