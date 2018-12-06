@@ -30,6 +30,7 @@ namespace Project4
             string movieid = Request.QueryString["id"];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             Utilities.MovieDetails details = new MovieDetails();
             details.Clicked(movieid);
 =======
@@ -129,6 +130,8 @@ namespace Project4
 
 >>>>>>> master
 
+=======
+>>>>>>> 3be332f89b38d75ab30826a3fbc925129879078a
             Utilities.MovieDetails newdetail = new MovieDetails(movieid, movieresult, movieyear);
 
 
