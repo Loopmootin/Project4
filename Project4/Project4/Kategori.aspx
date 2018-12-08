@@ -32,7 +32,7 @@
         </HeaderTemplate>
             <ItemTemplate>
                 
-                 <div class="top-movie col-3 split-container">
+                 <div class="top-movie col-sm-12 col-md-3 split-container">
                   <a href="film.aspx?movie=<%# Eval("movie_name") %>&id=<%# Eval("movie_id") %>&movieyear=<%# Eval("movie_release") %>">
                      <div class="title">
                       <h2 class="movietitle"><%# Eval("movie_name") %>

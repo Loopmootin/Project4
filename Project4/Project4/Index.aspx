@@ -12,7 +12,7 @@
                                <div class="top-movies-container col-12 justify-content-around row">
                     </HeaderTemplate>
                     <ItemTemplate>
-                        <div class="top-movie col-3 split-container">
+                        <div class="top-movie col-sm-12 col-md-3 split-container">
                             <img src="<%# Eval("poster_url") %>" alt="movie poster" />
                         </div>
                     </ItemTemplate>
