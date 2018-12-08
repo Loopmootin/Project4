@@ -33,9 +33,14 @@
             <ItemTemplate>
                 
                  <div class="top-movie col-3 split-container">
-                  <a href="film.aspx?movie=<%# Eval("movie_name") %>&id=<%# Eval("movie_id") %>&movieyear=<%# Eval("movie_release") %>"><%# Eval("movie_name") %>
-                     <%# Eval("movie_release") %>
+                  <a href="film.aspx?movie=<%# Eval("movie_name") %>&id=<%# Eval("movie_id") %>&movieyear=<%# Eval("movie_release") %>">
+                     <div class="title">
+                      <h2 class="movietitle"><%# Eval("movie_name") %>
+                   
+                      </div>
+                      <div class="poster-image">
                      <img src="<%# Eval("poster_url") %>" /></a>
+                     </div>
                 </div>
               
             </ItemTemplate>

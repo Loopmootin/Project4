@@ -198,6 +198,21 @@ footer {
 }
 
 
+.top-movie {
+    align-content {
+        text-decoration: none;
+    }
+}
+.movietitle {
+    text-align: center;
+    font-size: 1.6rem;
+    color: black;
+}
+.title {
+    min-height: 70px;
+    max-height: 70px;
+}
+.poster-image { }
 /* ============================
     Media queries
  ============================= */

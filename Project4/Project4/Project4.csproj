@@ -79,7 +79,7 @@
     <Content Include="Index.aspx" />
     <Content Include="Kategori.aspx" />
     <Content Include="search.aspx" />
-    <Content Include="test.aspx" />
+    <Content Include="InsertAllMovies.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -119,12 +119,12 @@
     <Compile Include="search.aspx.designer.cs">
       <DependentUpon>search.aspx</DependentUpon>
     </Compile>
-    <Compile Include="test.aspx.cs">
-      <DependentUpon>test.aspx</DependentUpon>
+    <Compile Include="InsertAllMovies.aspx.cs">
+      <DependentUpon>InsertAllMovies.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="test.aspx.designer.cs">
-      <DependentUpon>test.aspx</DependentUpon>
+    <Compile Include="InsertAllMovies.aspx.designer.cs">
+      <DependentUpon>InsertAllMovies.aspx</DependentUpon>
     </Compile>
     <Compile Include="Utilities\ArticleDetails.cs" />
     <Compile Include="Utilities\insertallmovies.cs" />

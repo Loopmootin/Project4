@@ -133,6 +133,18 @@ footer {
         border: 1px solid #374a67;
         padding: 4px 9px; }
 
+.top-movie align-content {
+  text-decoration: none; }
+
+.movietitle {
+  text-align: center;
+  font-size: 1.6rem;
+  color: black; }
+
+.title {
+  min-height: 70px;
+  max-height: 70px; }
+
 /* ============================
     Media queries
  ============================= */
