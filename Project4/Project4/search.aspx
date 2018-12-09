@@ -2,11 +2,11 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderBody" runat="server">
-
+        <asp:Label ID="LabelNoSearch" runat="server"></asp:Label>
         <asp:Repeater ID="RepeaterSearch" runat="server">
                <HeaderTemplate>
-            <table class="show-pest">
                 <div class="container">  
+                    
                     <div class="row justify-content-md-center">
         </HeaderTemplate>
             <ItemTemplate>
@@ -24,15 +24,5 @@
                         </div>
                 </div>
             </FooterTemplate>
-        </asp:Repeater>
-        <asp:Label ID="LabelMessage" runat="server" Text="Label"></asp:Label>
-    </p>
-        <p>
-        </p>
-    <p>
-    </p>
-       
-
-
-    
+        </asp:Repeater>       
 </asp:Content>

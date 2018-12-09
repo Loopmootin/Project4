@@ -19,7 +19,12 @@ namespace Project4
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
             SearchedMovies();
+            if (Request.QueryString["searchresult"] == null)
+            {
+                Response.Redirect("Kategori.aspx");
+            }
         }
 
         public void SearchedMovies()
@@ -33,13 +38,15 @@ namespace Project4
                 connection.AddParameter("@movie_name", SqlDbType.VarChar).Value = Request.QueryString["searchresult"];
 
                 RepeaterSearch.DataSource = connection.executeCmd();
+                if(RepeaterSearch.DataSource == null)
+                {
+                    LabelNoSearch.Text = "No Movie Found";
+                }
                 RepeaterSearch.DataBind();
-
-
             }
             catch (Exception ex)
             {
-                LabelMessage.Text = ex.Message;
+               // LabelMessage.Text = ex.Message;
             }
         }
     }

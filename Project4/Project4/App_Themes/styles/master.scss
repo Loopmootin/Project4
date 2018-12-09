@@ -16,16 +16,22 @@ body {
     background-repeat: repeat;
 }
 
+hr {
+    border-top: 1px solid #FCD303;
+}
 /* ============================
     Nav
  ============================= */
-
 .navbar {
     background-color: $blue;
     min-height: 80px;
 
     a {
         color: $white;
+    }
+
+    .nav-item {
+        margin: 0px 5px;
     }
 
     .btn-outline-success {
@@ -213,6 +219,52 @@ footer {
     max-height: 70px;
 }
 .poster-image { }
+
+
+/* ============================
+    Films
+ ============================= */
+
+.bg-wrapper {
+    width: 100%;
+    height: 100%;
+    background-image: url("../../Pictures/background-image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 40px;
+
+    .container {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+
+}
+
+.film-container {
+    padding: 40px;
+
+    h2 {
+        span {
+            font-size: 2em;
+            color: white;
+        }
+    }
+
+    .spanyear {
+    }
+
+    span {
+        color: white;
+    }
+
+    .filminfo {
+        color: #FCD303;
+    }
+
+    .film-image {
+        text-align: center;
+    }
+}
 /* ============================
     Media queries
  ============================= */

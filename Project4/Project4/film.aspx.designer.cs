@@ -13,22 +13,22 @@ namespace Project4 {
     public partial class film {
         
         /// <summary>
-        /// LabelPG control.
+        /// LabelMovieName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelPG;
+        protected global::System.Web.UI.WebControls.Label LabelMovieName;
         
         /// <summary>
-        /// LabelRatings control.
+        /// LabelYear control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelRatings;
+        protected global::System.Web.UI.WebControls.Label LabelYear;
         
         /// <summary>
         /// LabelPlot control.
@@ -40,15 +40,6 @@ namespace Project4 {
         protected global::System.Web.UI.WebControls.Label LabelPlot;
         
         /// <summary>
-        /// LabelChildRating control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelChildRating;
-        
-        /// <summary>
         /// LabelActors control.
         /// </summary>
         /// <remarks>
@@ -56,6 +47,24 @@ namespace Project4 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelActors;
+        
+        /// <summary>
+        /// LabelRatings control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelRatings;
+        
+        /// <summary>
+        /// LabelPG control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelPG;
         
         /// <summary>
         /// ImagePoster control.

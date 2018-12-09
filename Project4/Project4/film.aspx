@@ -2,25 +2,38 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderBody" runat="server">
-    <p>
-        <asp:Label ID="LabelPG" runat="server" Text="PG-Rating"></asp:Label>
-        <br />
-    </p>
-        <asp:Label ID="LabelRatings" runat="server" Text="Ratings"></asp:Label>
-    <br />
-    <br />
-    <p>
-        <asp:Label ID="LabelPlot" runat="server" Text="Plot"></asp:Label>
-    </p>
-    <p>
-        <asp:Label ID="LabelChildRating" runat="server" Text="Child Rating"></asp:Label>
-    </p>
-    <p>
-        <asp:Label ID="LabelActors" runat="server" Text="Actors"></asp:Label>
-    </p>
-    <p>
-        <asp:Image ID="ImagePoster" runat="server" />
-    </p>
-    <p>
-    </p>
+ <div class="bg-wrapper">
+
+    <div class="wrapper">
+        <div class="container">
+            <div class="film-container">
+              <div class="row">
+                <div class="col">
+                   <h2><asp:Label ID="LabelMovieName" runat="server" Text="Label"></asp:Label></h2>
+                    <span class="spanyear"><asp:Label ID="LabelYear" runat="server" Text="Label"></asp:Label></span>
+                    <hr />
+                    
+                    <div class="infomation">
+                       <span class="filminfo">Description</span>
+                        <p><asp:Label Text="Description" ID="LabelPlot" runat="server" /></p>
+                        <span class="filminfo">Actors</span>
+                        <p><asp:Label Text="Actors" ID="LabelActors" runat="server" /></p>
+                        <span class="filminfo">Rating</span>
+                       <p><asp:Label Text="Rating" ID="LabelRatings" runat="server" /></p>
+                        <span class="filminfo">Rated</span>
+                       <p><asp:Label Text="Rated" ID="LabelPG" runat="server" /></p>
+
+                    </div>
+               </div>
+                <div class="col">
+                    <div class="film-image">
+                    <asp:Image ID="ImagePoster" runat="server" />
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+
+     </div>
 </asp:Content>

@@ -31,10 +31,10 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NN573CJ"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-
+    
     <form id="formContent" runat="server">
     <nav class="navbar navbar-expand-lg">
-      <a class="navbar-brand" href="#">FuckingFilm</a>
+      <a class="navbar-brand" href="#"><img width="350px;" src="Pictures/FuckingFilmLogo.png" /></a>
       <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -60,12 +60,9 @@
               <a class="dropdown-item" href="Kategori.aspx?id=3">Thriller</a>
               <a class="dropdown-item" href="Kategori.aspx?id=4">Science Fiction</a>
               <a class="dropdown-item" href="Kategori.aspx?id=2">Action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="testpage.aspx">Kontakt</a>
+            <a class="nav-link" href="InsertAllMovies.aspx">InsertAllMovies</a>
           </li>
         </ul>
       </div>
