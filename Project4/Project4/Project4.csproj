@@ -79,6 +79,7 @@
     <Content Include="Index.aspx" />
     <Content Include="Kategori.aspx" />
     <Content Include="Pictures\FuckingFilmLogo.png" />
+    <Content Include="Pictures\placeholder.jpg" />
     <Content Include="search.aspx" />
     <Content Include="InsertAllMovies.aspx" />
     <Content Include="Web.config" />

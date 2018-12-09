@@ -52,10 +52,17 @@ namespace Project4
                                     if (mysplit[i] == "Poster")
                                     {
                                         imageposter = mysplit[++i];
+
+                                        if(imageposter == "N/A")
+                                        {
+                                        imageposter = "pictures/placeholder.jpg";
+                                        }
+
                                         Utilities.MovieDetails movie = new Utilities.MovieDetails();
                                         string movie_id = Convert.ToString(rdr.GetInt32(0));
                                         movie.SavePoster(imageposter, movie_id);
                                         break;
+
                                     }
                                 }
                             }

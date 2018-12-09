@@ -9,6 +9,9 @@ body {
 hr {
   border-top: 1px solid #FCD303; }
 
+a {
+  color: #fff; }
+
 /* ============================
     Nav
  ============================= */
@@ -47,7 +50,10 @@ hr {
     .container .split-container img {
       width: 100%;
       transform: scale(1);
-      transition: 0.5s; }
+      transition: 0.5s;
+      width: 95%;
+      min-height: 350px;
+      max-height: 350px; }
     .container .split-container:hover {
       transform: scale(1.02);
       transition: 0.5s;
