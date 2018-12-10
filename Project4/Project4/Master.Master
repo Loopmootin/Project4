@@ -33,7 +33,7 @@
     <!-- End Google Tag Manager (noscript) -->
     
     <form id="formContent" runat="server">
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-xl">
       <a class="navbar-brand" href="#"><img width="350px;" src="Pictures/FuckingFilmLogo.png" /></a>
       <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>

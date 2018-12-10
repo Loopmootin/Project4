@@ -30,6 +30,7 @@ a {
 .navbar {
     background-color: $blue;
     min-height: 80px;
+    padding: 0;
 
     a {
         color: $white;
@@ -60,6 +61,10 @@ a {
     }
 }
 
+.navbar-collapse {
+    padding: 10px;
+}
+
 
 /* ============================
     Front page container
@@ -83,7 +88,7 @@ a {
             transform: scale(1);
             transition: 0.5s;
             width: 95%;
-            min-height: 350px;
+            min-height: 250px;
             max-height: 350px;
         }
 
@@ -242,7 +247,7 @@ footer {
     padding: 40px;
 
     .container {
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.9);
     }
 
 
@@ -270,7 +275,11 @@ footer {
     }
 
     .film-image {
-        text-align: center;
+        text-align: right;
+        img  {
+            max-width: 100%;
+            min-width: 200px;
+        }
     }
 }
 /* ============================
@@ -300,4 +309,9 @@ footer {
         max-width: 70%;
         margin: 0 auto;
     }
+    .film-container {
+        .film-image {
+            text-align: center;
+        }
+    } 
 }
