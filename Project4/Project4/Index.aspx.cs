@@ -27,7 +27,7 @@ namespace Project4
             DataSet ds = new DataSet();
             ds.ReadXml(destinationfile);
             DataTable dt = ds.Tables[0];
-
+                
             int viewcounter = 0;
             int randomCommercial = (new Random()).Next(0, dt.Rows.Count);
 
@@ -35,10 +35,7 @@ namespace Project4
 
             dt.Rows[randomCommercial][3] = viewcounter;
 
-            CommercialPoster.ImageUrl = Convert.ToString(dt.Rows[randomCommercial][1]);
-
-            //GridView1.DataSource = dt;
-            //GridView1.DataBind();
+            CommercialPoster.ImageUrl = "pictures/" + Convert.ToString(dt.Rows[randomCommercial][1]);
 
             ds.WriteXml(Server.MapPath("xml/CommercialsTransformed.xml"));
 
