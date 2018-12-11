@@ -31,12 +31,14 @@ namespace Project4
             int viewcounter = 0;
             int randomCommercial = (new Random()).Next(0, dt.Rows.Count);
 
-            viewcounter = viewcounter + Convert.ToInt32(ds.Tables[0].Rows[0][3]) + 1;
+            viewcounter = viewcounter + Convert.ToInt32(ds.Tables[0].Rows[randomCommercial][3]) + 1;
 
             dt.Rows[randomCommercial][3] = viewcounter;
 
-            GridView1.DataSource = dt;
-            GridView1.DataBind();
+            CommercialPoster.ImageUrl = Convert.ToString(dt.Rows[randomCommercial][1]);
+
+            //GridView1.DataSource = dt;
+            //GridView1.DataBind();
 
             ds.WriteXml(Server.MapPath("xml/CommercialsTransformed.xml"));
 

@@ -7,7 +7,7 @@
 
         <asp:GridView ID="GridView1" runat="server">
             </asp:GridView>
-
+        <asp:Image ID="CommercialPoster" runat="server" />
         <div class="justify-content-md-center">
             <h2>Top film</h2>
                 <asp:Repeater ID="RepeaterTop" runat="server">
