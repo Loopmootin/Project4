@@ -21,21 +21,22 @@ namespace Project4
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            // if the XML uses a namespace, the XSLT must refer to this namespace
-            //string sourcefile = Server.MapPath("xml/Commercials.xml");
-            //string xslfile = Server.MapPath("xml/CommercialsXSLT.xslt");
-            //string destinationfile = Server.MapPath("xml/CommercialsTransformed.xml");
+             //if the XML uses a namespace, the XSLT must refer to this namespace
+             string sourcefile = Server.MapPath("Commercials.xml");
+             string xslfile = Server.MapPath("CommercialsXSLT.xslt");
+             string destinationfile = Server.MapPath("CommercialsTransformed.xml");
 
-            //FileStream fs = new FileStream(destinationfile, FileMode.Create);
-            //XslCompiledTransform xct = new XslCompiledTransform();
+             FileStream fs = new FileStream(destinationfile, FileMode.Create);
+             XslCompiledTransform xct = new XslCompiledTransform();
 
-            //xct.Load(xslfile);
-            //xct.Transform(sourcefile, null, fs);
-            //fs.Close();
+             xct.Load(xslfile);
+             xct.Transform(sourcefile, null, fs);
+             fs.Close();
 
-            //DataSet ds = new DataSet();
-            //ds.ReadXml(destinationfile);
-            //DataTable dt = ds.Tables[0];
+                
+             //DataSet ds = new DataSet();
+             //ds.ReadXml(destinationfile);
+             //DataTable dt = ds.Tables[0];
 
 
 

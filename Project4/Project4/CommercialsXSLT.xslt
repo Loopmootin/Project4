@@ -23,9 +23,6 @@
         <xsl:value-of select="c:telephones/c:telephone"/>
         <xsl:value-of select="c:telephone"/>
       </xsl:element>
-      <xsl:element name="">
-        
-      </xsl:element>
     </xsl:element>
   </xsl:template>
 </xsl:stylesheet>
