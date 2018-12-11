@@ -26,11 +26,16 @@ namespace Project4
         public void allmovies()
         {
             //Tobtob
-            //SqlConnection conn = new SqlConnection(@"data source = DESKTOP-6CQP77U;  integrated security = true; database = MovieDatabase");
+            SqlConnection conn = new SqlConnection(@"data source = DESKTOP-6CQP77U;  integrated security = true; database = MovieDatabase");
 
             //Chrischris
+<<<<<<< HEAD
             SqlConnection conn = new SqlConnection(@"data source = LAPTOP-A8BTI830; integrated security = true; database = MovieDatabase");
             // SqlConnection conn = new SqlConnection(@"data source = CHRISTOFFER-PC; integrated security = true; database = MovieDatabase");
+=======
+            // SqlConnection conn = new SqlConnection(@"data source = LAPTOP-A8BTI830; integrated security = true; database = MovieDatabase");
+            //SqlConnection conn = new SqlConnection(@"data source = CHRISTOFFER-PC; integrated security = true; database = MovieDatabase");
+>>>>>>> 22c6e07c5017df7e1bd38ed206cce9f881159778
 
             SqlDataReader rdr = null;
             try
@@ -62,15 +67,22 @@ namespace Project4
                                         {
                                         imageposter = "pictures/placeholder.jpg";
                                         }
-
-                                        Utilities.MovieDetails movie = new Utilities.MovieDetails();
+                                    Utilities.MovieDetails movie = new Utilities.MovieDetails();
                                         string movie_id = Convert.ToString(rdr.GetInt32(0));
                                         movie.SavePoster(imageposter, movie_id);
                                         break;
-
                                     }
+                                
                                 }
                             }
+                        if (mysplit[1] == "False")
+                        {
+                            string imageposter;
+                            imageposter = "pictures/placeholder.jpg";
+                            Utilities.MovieDetails movie = new Utilities.MovieDetails();
+                            string movie_id = Convert.ToString(rdr.GetInt32(0));
+                            movie.SavePoster(imageposter, movie_id);
+                        }
                     }
                     testlabel.Text = rdr.GetInt32(0).ToString();
                 }

@@ -130,7 +130,6 @@
       <DependentUpon>InsertAllMovies.aspx</DependentUpon>
     </Compile>
     <Compile Include="Utilities\ArticleDetails.cs" />
-    <Compile Include="Utilities\insertallmovies.cs" />
     <Compile Include="Utilities\MovieDetails.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>

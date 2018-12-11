@@ -23,7 +23,10 @@
         <xsl:value-of select="c:telephones/c:telephone"/>
         <xsl:value-of select="c:telephone"/>
       </xsl:element>
+<<<<<<< HEAD:Project4/Project4/xml/CommercialsXSLT.xslt
       <xsl:element name="ViewCount">0</xsl:element>
+=======
+>>>>>>> 22c6e07c5017df7e1bd38ed206cce9f881159778:Project4/Project4/CommercialsXSLT.xslt
     </xsl:element>
   </xsl:template>
 </xsl:stylesheet>
