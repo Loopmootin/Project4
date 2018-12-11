@@ -35,7 +35,7 @@ namespace Project4
 
             dt.Rows[randomCommercial][3] = viewcounter;
 
-            GridView1.DataSource = dt.Rows;
+            GridView1.DataSource = dt;
             GridView1.DataBind();
 
             ds.WriteXml(Server.MapPath("xml/CommercialsTransformed.xml"));
