@@ -21,7 +21,7 @@ namespace Project4
         {
 
             SearchedMovies();
-            if (Request.QueryString["searchresult"] == null)
+            if (string.IsNullOrEmpty(Request.QueryString["searchresult"]))
             {
                 Response.Redirect("Kategori.aspx");
             }
@@ -38,10 +38,6 @@ namespace Project4
                 connection.AddParameter("@movie_name", SqlDbType.VarChar).Value = Request.QueryString["searchresult"];
 
                 RepeaterSearch.DataSource = connection.executeCmd();
-                if(RepeaterSearch.DataSource == null)
-                {
-                    LabelNoSearch.Text = "No Movie Found";
-                }
                 RepeaterSearch.DataBind();
             }
             catch (Exception ex)

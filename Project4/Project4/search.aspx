@@ -15,7 +15,7 @@
                  <a href="film.aspx?movie=<%# Eval("movie_name") %>&id=<%# Eval("movie_id") %>&movieyear=<%# Eval("movie_release") %>">
                       <%# Eval("movie_name") %>
                       <%# Eval("movie_release") %>
-                     <img src="<%# Eval("poster_url") %>" />
+                     <img src="<%# Eval("poster_url") %>" alt="<%# Eval("poster_url") %>" />
                 </a>
                 </div>
               

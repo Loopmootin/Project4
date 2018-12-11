@@ -39,7 +39,7 @@
                    
                       </div>
                       <div class="poster-image">
-                     <img src="<%# Eval("poster_url") %>" /></a>
+                     <img src="<%# Eval("poster_url") %>" alt="<%# Eval("poster_url") %>" /></a>
                      </div>
                 </div>
               

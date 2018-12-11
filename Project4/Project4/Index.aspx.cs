@@ -37,8 +37,6 @@ namespace Project4
 
             CommercialPoster.ImageUrl = Convert.ToString(dt.Rows[randomCommercial][1]);
 
-            //GridView1.DataSource = dt;
-            //GridView1.DataBind();
 
             ds.WriteXml(Server.MapPath("xml/CommercialsTransformed.xml"));
 

@@ -88,9 +88,9 @@
               <h2>Navigation</h2>
                 <hr />
                 <ul>
-                     <li>Film</li>
-                     <li>Artikler</li>
-                     <li>Kontakt</li>
+                     <li><a href="film.aspx">Film</a></li>
+                     <li><a href="">Artikler</a></li>
+                     <li><a href="">Kontakt</a></li>
                 </ul>
             </div>
             <div class="col-sm">
