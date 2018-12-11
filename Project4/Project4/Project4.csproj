@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="xml\TransformPage.aspx" />
     <None Include="App_Themes\styles\master.scss" />
     <Content Include="App_Themes\styles\master.css">
       <DependentUpon>master.scss</DependentUpon>
@@ -136,6 +137,13 @@
     <Compile Include="Utilities\testccc.cs" />
     <Compile Include="Utilities\Token.cs" />
     <Compile Include="Utilities\Utility.cs" />
+    <Compile Include="xml\TransformPage.aspx.cs">
+      <DependentUpon>TransformPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="xml\TransformPage.aspx.designer.cs">
+      <DependentUpon>TransformPage.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Master.Master" />

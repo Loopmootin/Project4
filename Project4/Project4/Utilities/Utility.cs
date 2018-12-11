@@ -23,8 +23,8 @@ namespace Project4
             //conn = new SqlConnection(@"data source = DESKTOP-6CQP77U; integrated security = true; database = MovieDatabase");
 
             //Chrischris
-            // conn = new SqlConnection(@"data source = LAPTOP-A8BTI830; integrated security = true; database = MovieDatabase");
-            conn = new SqlConnection(@"data source = CHRISTOFFER-PC; integrated security = true; database = MovieDatabase");
+            conn = new SqlConnection(@"data source = LAPTOP-A8BTI830; integrated security = true; database = MovieDatabase");
+            // conn = new SqlConnection(@"data source = CHRISTOFFER-PC; integrated security = true; database = MovieDatabase");
             cmd = null;
             rdr = null;
             conn.Open();

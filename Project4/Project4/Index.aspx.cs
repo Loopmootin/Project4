@@ -21,22 +21,27 @@ namespace Project4
 
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            
+
             // if the XML uses a namespace, the XSLT must refer to this namespace
-            //string sourcefile = Server.MapPath("xml/Commercials.xml");
-            //string xslfile = Server.MapPath("xml/CommercialsXSLT.xslt");
-            //string destinationfile = Server.MapPath("xml/CommercialsTransformed.xml");
+            string destinationfile = Server.MapPath("xml/CommercialsTransformed.xml");
 
-            //FileStream fs = new FileStream(destinationfile, FileMode.Create);
-            //XslCompiledTransform xct = new XslCompiledTransform();
+            DataSet ds = new DataSet();
+            ds.ReadXml(destinationfile);
+            DataTable dt = ds.Tables[0];
 
-            //xct.Load(xslfile);
-            //xct.Transform(sourcefile, null, fs);
-            //fs.Close();
+            int viewcounter = 0;
+            int randomCommercial = (new Random()).Next(0, dt.Rows.Count);
 
-            //DataSet ds = new DataSet();
-            //ds.ReadXml(destinationfile);
-            //DataTable dt = ds.Tables[0];
+            viewcounter = viewcounter + Convert.ToInt32(ds.Tables[0].Rows[0][3]) + 1;
 
+            dt.Rows[randomCommercial][3] = viewcounter;
+
+            GridView1.DataSource = dt.Rows;
+            GridView1.DataBind();
+
+            ds.WriteXml(Server.MapPath("xml/CommercialsTransformed.xml"));
 
 
 

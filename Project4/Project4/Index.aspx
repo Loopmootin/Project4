@@ -5,6 +5,9 @@
 <asp:Content ID="ContentBody" ContentPlaceHolderID="ContentPlaceHolderBody" runat="server">
     <div class="container">  
 
+        <asp:GridView ID="GridView1" runat="server">
+            </asp:GridView>
+
         <div class="justify-content-md-center">
             <h2>Top film</h2>
                 <asp:Repeater ID="RepeaterTop" runat="server">
