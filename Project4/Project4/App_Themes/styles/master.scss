@@ -98,12 +98,13 @@ a {
 
     .commercialImage {
         width: 100%;
-        height: 150px;
+        height: auto;
 
         img {
             height: 100%;
             display: block;
-            margin: 0 auto;
+            margin: 10px auto;
+            box-shadow: 0 0 3px grey;
         }
     }
 
@@ -136,227 +137,191 @@ a {
             }
         }
     }
+}
 
-    .commercials {
-        margin-top: 20px;
 
-        .commercial {
-            display: none;
-
-            h3, p {
-                z-index: 2;
-                position: absolute;
-                color: #fff;
-                width: 60%;
-                padding-left: 20px;
-                margin-top: 20px;
-            }
-
-            p {
-                position: relative;
-                bottom: 35px;
-                width: 100%;
-                text-align: right;
-                padding-right: 20px;
-                margin-top: 0px;
-            }
-
-            .logo-img {
-                height: 200px;
-                width: 100%;
-                z-index: 1;
-                overflow: hidden;
-            }
-        }
+    .form-inline .form-control {
+        width: 150px;
     }
-}
-
-
-.form-inline .form-control {
-    width: 150px;
-}
-
-/* ============================
+    /* ============================
     Footer
  ============================= */
-
-footer {
-    background-color: $blue;
-    color: $white;
-    min-height: 80px;
-
-    .footer-container {
-        width: 60%;
+    footer {
         background-color: $blue;
-        padding: 50px 0;
-        margin: 0 auto;
-    }
-}
+        color: $white;
+        min-height: 80px;
 
-/* ============================
+        .footer-container {
+            width: 60%;
+            background-color: $blue;
+            padding: 50px 0;
+            margin: 0 auto;
+        }
+    }
+    /* ============================
     Category site
  ============================= */
+    .category-selection {
+        display: block;
+        width: 60%;
+        margin: 30px auto;
 
-.category-selection {
-    display: block;
-    width: 60%;
-    margin: 30px auto;
+        .category-selection-category {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            width: 100%;
+            margin-bottom: 10px;
 
-    .category-selection-category {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        width: 100%;
-        margin-bottom: 10px;
+            .category-selector {
+                background-color: $blue;
+                padding: 5px 10px;
+                border-radius: $border;
+                color: white;
+                text-decoration: none;
+                margin: 5px;
 
-        .category-selector {
-            background-color: $blue;
-            padding: 5px 10px;
-            border-radius: $border;
-            color: white;
-            text-decoration: none;
-            margin: 5px;
+                &:hover {
+                    color: $blue;
+                    background-color: $white;
+                    border: 1px solid $blue;
+                    padding: 4px 9px;
+                }
+            }
+        }
 
-            &:hover {
-                color: $blue;
-                background-color: $white;
-                border: 1px solid $blue;
-                padding: 4px 9px;
+        .category-selection-year {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            width: 100%;
+
+            .category-selector {
+                background-color: $blue;
+                padding: 5px 10px;
+                border-radius: $border;
+                color: white;
+                text-decoration: none;
+                margin: 5px;
+
+                &:hover {
+                    color: $blue;
+                    background-color: $white;
+                    border: 1px solid $blue;
+                    padding: 4px 9px;
+                }
             }
         }
     }
 
-    .category-selection-year {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        width: 100%;
 
-        .category-selector {
-            background-color: $blue;
-            padding: 5px 10px;
-            border-radius: $border;
-            color: white;
+    .top-movie {
+        align-content {
             text-decoration: none;
-            margin: 5px;
-
-            &:hover {
-                color: $blue;
-                background-color: $white;
-                border: 1px solid $blue;
-                padding: 4px 9px;
-            }
         }
     }
-}
 
-
-.top-movie {
-    align-content {
-        text-decoration: none;
+    .movietitle {
+        text-align: center;
+        font-size: 1.6rem;
+        color: black;
     }
-}
-.movietitle {
-    text-align: center;
-    font-size: 1.6rem;
-    color: black;
-}
-.title {
-    min-height: 70px;
-    max-height: 70px;
-}
 
-
-
-/* ============================
+    .title {
+        min-height: 70px;
+        max-height: 70px;
+    }
+    /* ============================
     Films
  ============================= */
+    .bg-wrapper {
+        width: 100%;
+        height: 100%;
+        background-image: url("../../Pictures/background-image.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 40px;
 
-.bg-wrapper {
-    width: 100%;
-    height: 100%;
-    background-image: url("../../Pictures/background-image.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 40px;
-
-    .container {
-        background-color: rgba(0, 0, 0, 0.7);
-    }
-
-
-}
-
-.film-container {
-    padding: 40px;
-
-    h2 {
-        span {
-            font-size: 2em;
-            color: white;
+        .container {
+            background-color: rgba(0, 0, 0, 0.7);
         }
     }
 
-    .spanyear {
-    }
-
-    span {
-        color: white;
-    }
-
-    .filminfo {
-        color: #FCD303;
-    }
-
-    .film-image {
-        text-align: right;
-        img  {
-            max-width: 100%;
-            min-width: 200px;
-        }
-    }
-}
-/* ============================
-    Media queries
- ============================= */
-@media only screen and (max-width: 1200px) {
-    .commercial-box, .category-box {
-        display: none;
-    }
-}
-
-@media only screen and (max-width: 990px) {
-    .my-sm-0 {
-        margin-top: 5px !important;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .container .split-container {
-        max-width: 45%;
-        margin: 0 auto;
-    }
-}
-
-@media only screen and (max-width: 570px) {
-    .container .split-container {
-        max-width: 70%;
-        margin: 0 auto;
-    }
     .film-container {
-        .film-image {
-            text-align: center;
-        }
+        padding: 40px;
+
         h2 {
             span {
-                font-size: 1.5em;
+                font-size: 2em;
+                color: white;
+            }
+        }
+
+        .spanyear {
+        }
+
+        span {
+            color: white;
+        }
+
+        .filminfo {
+            color: #FCD303;
+        }
+
+        .film-image {
+            text-align: right;
+
+            img {
+                max-width: 100%;
+                min-width: 200px;
             }
         }
     }
-    .navbar-brand {
-        width: 80%;
+    /* ============================
+    Media queries
+ ============================= */
+    @media only screen and (max-width: 1200px) {
+        .commercial-box, .category-box {
+            display: none;
+        }
     }
-    .bg-wrapper {
-        padding: 5px;
+
+    @media only screen and (max-width: 990px) {
+        .my-sm-0 {
+            margin-top: 5px !important;
+        }
     }
-}
+
+    @media only screen and (max-width: 768px) {
+        .container .split-container {
+            max-width: 45%;
+            margin: 0 auto;
+        }
+    }
+
+    @media only screen and (max-width: 570px) {
+        .container .split-container {
+            max-width: 70%;
+            margin: 0 auto;
+        }
+
+        .film-container {
+            .film-image {
+                text-align: center;
+            }
+
+            h2 {
+                span {
+                    font-size: 1.5em;
+                }
+            }
+        }
+
+        .navbar-brand {
+            width: 80%;
+        }
+
+        .bg-wrapper {
+            padding: 5px;
+        }
+    }
