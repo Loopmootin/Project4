@@ -22,15 +22,6 @@ namespace Project4 {
         protected global::System.Web.UI.WebControls.Image CommercialPoster;
         
         /// <summary>
-        /// CommercialPoster control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image CommercialPoster;
-        
-        /// <summary>
         /// RepeaterTop control.
         /// </summary>
         /// <remarks>
@@ -38,14 +29,5 @@ namespace Project4 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater RepeaterTop;
-        
-        /// <summary>
-        /// LabelArticle control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelArticle;
     }
 }

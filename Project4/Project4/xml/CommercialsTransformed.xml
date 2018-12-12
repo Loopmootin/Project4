@@ -4,24 +4,24 @@
     <Name>Yensid Tlaw</Name>
     <Logo>logo1.jpg</Logo>
     <Phone>(111) 22222222</Phone>
-    <ViewCount>16</ViewCount>
+    <ViewCount>21</ViewCount>
   </Company>
   <Company>
     <Name>Tinycomp</Name>
     <Logo>logo2.jpg</Logo>
     <Phone>44444444</Phone>
-    <ViewCount>13</ViewCount>
+    <ViewCount>16</ViewCount>
   </Company>
   <Company>
     <Name>Cartoons</Name>
     <Logo>logo3.jpg</Logo>
     <Phone>55+ 66666666</Phone>
-    <ViewCount>22</ViewCount>
+    <ViewCount>28</ViewCount>
   </Company>
   <Company>
     <Name>Web Developers</Name>
     <Logo>logo4.jpg</Logo>
     <Phone />
-    <ViewCount>14</ViewCount>
+    <ViewCount>19</ViewCount>
   </Company>
 </Companies>

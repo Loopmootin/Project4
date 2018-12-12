@@ -40,7 +40,7 @@ namespace Project4
 
             ds.WriteXml(Server.MapPath("xml/CommercialsTransformed.xml"));
 
-
+            TopArticles();
 
             Utility connect = new Utility();
 
@@ -56,51 +56,65 @@ namespace Project4
                 // LabelMessage.Text = ex.Message;
             }
 
+
             
-            string articleresult = "Avatar";
+        }
+        public void TopArticles()
+        {
+            //Tobtob
+            //SqlConnection conn = new SqlConnection(@"data source = DESKTOP-6CQP77U;  integrated security = true; database = MovieDatabase");
+
+            //Chrischris
+            SqlConnection conn = new SqlConnection(@"data source = LAPTOP-A8BTI830; integrated security = true; database = MovieDatabase");
+            // SqlConnection conn = new SqlConnection(@"data source = CHRISTOFFER-PC; integrated security = true; database = MovieDatabase");
 
 
-            Utilities.ArticleDetails newarticle = new ArticleDetails();
-
-            newarticle.GetDownloadArticleString(articleresult);
-            articlesplit = newarticle.splitarticle();
-
-            LabelArticle.Text = articlesplit.Length.ToString();
-
-
-
-  
-            if (articlesplit[1] != null)
-            {
-                LabelArticle.Text = articlesplit.Length.ToString();
-                for (int i = 0; i < articlesplit.Length; i++)
-                {
-                    if (articlesplit[i] == "url")
-                    {
-                        LabelArticle.Text = articlesplit[++i];
-                    }
-                }
-            }
-
-
-
-
-
-
-            /*Utility connectArticle = new Utility();
-
+            SqlDataReader rdr = null;
             try
             {
-                connectArticle.createCommand("SELECT TOP 8 * FROM movie, Clicks WHERE movie.movie_id = Clicks.movie_id ORDER BY click desc", CommandType.Text);
-                RepeaterArticles.DataSource = connectArticle.executeCmd();
-                RepeaterArticles.DataBind();
+                conn.Open();
+                string sqlcheck = "SELECT TOP 8 * FROM movie, Clicks WHERE movie.movie_id = Clicks.movie_id ORDER BY click desc";
+                SqlCommand cmd = new SqlCommand(sqlcheck, conn);
+                using (rdr = cmd.ExecuteReader())
+                {
+                    List<string> articleurl = new List<string>();
+                    while (rdr.Read())
+                    {
+                        string articleresult = rdr.GetString(1);
+                        
+                        string result;
+                        WebClient client = new WebClient();
+                        result = client.DownloadString("https://api.nytimes.com/svc/movies/v2/reviews/search.json?api-key=" + ArticleToken.articletoken + "&query=" + articleresult);
+                        string[] seperatingChars = { "\":\"", "\",\"", "\":[{\"", "\"},{\"", "\"}]\"", "{\"", "\"}" };
+                        string[] mysplit = result.Split(seperatingChars, System.StringSplitOptions.RemoveEmptyEntries);
 
+                        if (mysplit[1] != "False")
+                        {
+
+                            for (int i = 0; i < mysplit.Length; i++)
+                            {
+                                if (mysplit[i] == "url")
+                                {
+                                    articleurl.Add(mysplit[++i]);
+
+                                }
+
+                            }
+                        }
+
+                    }
+                    RepeaterArticle.DataSource = articleurl;
+                    RepeaterArticle.DataBind();
+                }
+                
             }
             catch (Exception ex)
             {
-                // LabelMessage.Text = ex.Message;
-            }*/
-
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
     }
 }
