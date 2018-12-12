@@ -222,11 +222,24 @@ a {
     }
 
 
-    .top-movie {
-        align-content {
-            text-decoration: none;
-        }
+.top-movie {
+    label {
+        color: white;
+        background: $blue;
+        box-shadow: 0px 0px 3px grey;
+        padding: 5px;
+        position: absolute;
+        z-index: 200;
+        bottom: 30px;
+        cursor: pointer;
+        left: 6vw;
+        border-radius: $border
     }
+
+    align-content {
+        text-decoration: none;
+    }
+}
 
     .movietitle {
         text-align: center;

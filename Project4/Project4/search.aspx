@@ -13,8 +13,7 @@
                 
                  <div class="top-movie col-sm-12 col-md-3 split-container">
                  <a href="film.aspx?movie=<%# Eval("movie_name") %>&id=<%# Eval("movie_id") %>&movieyear=<%# Eval("movie_release") %>">
-                      <%# Eval("movie_name") %>
-                      <%# Eval("movie_release") %>
+                      <label><%# Eval("movie_name") %> <%# Eval("movie_release") %></label>
                      <img src="<%# Eval("poster_url") %>" alt="<%# Eval("poster_url") %>" />
                 </a>
                 </div>
