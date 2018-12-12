@@ -59,12 +59,14 @@ a {
     margin-left: 0;
     margin-right: 0; }
   .container .commercialImage {
-    width: 100%;
+    width: 80%;
     height: auto;
-    overflow: hidden; }
+    overflow: hidden;
+    display: block;
+    margin: 0 auto; }
     .container .commercialImage img {
       height: 100%;
-      width: 100%;
+      width: 99%;
       display: block;
       margin: 10px auto;
       box-shadow: 0 0 3px grey; }
