@@ -34,6 +34,7 @@ a {
 
     a {
         color: $white;
+        font-weight: 300;
     }
 
     .nav-item {
@@ -148,6 +149,12 @@ a {
     }
 }
 
+.primary-header {
+    font-weight: 300;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 15px;
+}
 
     .form-inline .form-control {
         width: 150px;
@@ -159,6 +166,18 @@ a {
         background-color: $blue;
         color: $white;
         min-height: 80px;
+        padding: 50px 0;
+        margin: 0 auto;
+    }
+
+    h2 {
+        font-weight: 300;
+    }
+
+    li {
+        font-weight: 300;
+    }
+}
 
         .footer-container {
             width: 60%;
@@ -242,6 +261,15 @@ a {
     align-content {
         text-decoration: none;
     }
+}
+.movietitle {
+    text-align: center;
+    font-size: 1.6rem;
+    color: black;
+}
+.title {
+    min-height: 70px;
+    max-height: 70px;
 }
 
     .movietitle {
