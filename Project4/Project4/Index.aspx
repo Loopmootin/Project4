@@ -9,7 +9,6 @@
                 <asp:Image ID="CommercialPoster" runat="server" />
             </div>
 
-            <h2>Top film</h2>
             <h2 class="primary-header">Top film</h2>
                 <asp:Repeater ID="RepeaterTop" runat="server">
                     <HeaderTemplate>
@@ -31,45 +30,28 @@
                </asp:Repeater>
 
 
-            <h2>Artikler</h2>
+            <h2 class="primary-header">Artikler</h2>
             
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-              <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-              </ol>
-
-              <div class="carousel-inner">
-                  <div class="carousel-item active">
-                      <img class="d-block w-100" src="..." alt="First slide">
-                   </div>
-
                 <asp:Repeater ID="RepeaterArticle" runat="server">
-                    <HeaderTemplate></HeaderTemplate>
+                    <HeaderTemplate>
+
+                        <div class="top-movies-container col-12 justify-content-around row">
+                    </HeaderTemplate>
                     <ItemTemplate>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" src="Pictures/avatar.jpg" alt="First slide">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5><%# Container.DataItem.ToString()  %></h5>
-                                <p>...</p>
-                            </div>
+                        <div class="top-movie col-sm-12 col-md-3 split-container">
+                        <a href="<%# DataBinder.Eval(Container.DataItem, "Url") %>">
+                            <img src="Pictures/NewYorkTimesReview.jpg" />
+                             <span class="articletitle"><%# DataBinder.Eval(Container.DataItem, "Title") %></span>
+                        </a>
                         </div>
                     </ItemTemplate>
-                    <FooterTemplate></FooterTemplate>
+                    <FooterTemplate>
+                         </div>
+                    </FooterTemplate>
                </asp:Repeater>
 
-              </div>
+            <asp:Label ID="LabelMessage" runat="server" Text="Label"></asp:Label>
 
-              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
-            </div>
         </div>
     </div>
 </asp:Content>

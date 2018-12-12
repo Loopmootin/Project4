@@ -63,10 +63,10 @@ namespace Project4
         public void TopArticles()
         {
             //Tobtob
-            //SqlConnection conn = new SqlConnection(@"data source = DESKTOP-6CQP77U;  integrated security = true; database = MovieDatabase");
+            SqlConnection conn = new SqlConnection(@"data source = DESKTOP-6CQP77U;  integrated security = true; database = MovieDatabase");
 
             //Chrischris
-            SqlConnection conn = new SqlConnection(@"data source = LAPTOP-A8BTI830; integrated security = true; database = MovieDatabase");
+            //SqlConnection conn = new SqlConnection(@"data source = LAPTOP-A8BTI830; integrated security = true; database = MovieDatabase");
             // SqlConnection conn = new SqlConnection(@"data source = CHRISTOFFER-PC; integrated security = true; database = MovieDatabase");
 
 
@@ -74,11 +74,17 @@ namespace Project4
             try
             {
                 conn.Open();
-                string sqlcheck = "SELECT TOP 8 * FROM movie, Clicks WHERE movie.movie_id = Clicks.movie_id ORDER BY click desc";
+                string sqlcheck = "SELECT TOP 4 * FROM movie, Clicks WHERE movie.movie_id = Clicks.movie_id ORDER BY click desc";
                 SqlCommand cmd = new SqlCommand(sqlcheck, conn);
+
+
+                DataTable dt = new DataTable();
+                DataRow dr;
+                dt.Columns.Add("Url");
+                dt.Columns.Add("Title");
+
                 using (rdr = cmd.ExecuteReader())
                 {
-                    List<string> articleurl = new List<string>();
                     while (rdr.Read())
                     {
                         string articleresult = rdr.GetString(1);
@@ -89,6 +95,7 @@ namespace Project4
                         string[] seperatingChars = { "\":\"", "\",\"", "\":[{\"", "\"},{\"", "\"}]\"", "{\"", "\"}" };
                         string[] mysplit = result.Split(seperatingChars, System.StringSplitOptions.RemoveEmptyEntries);
 
+                        dr = dt.NewRow();
                         if (mysplit[1] != "False")
                         {
 
@@ -96,7 +103,7 @@ namespace Project4
                             {
                                 if (mysplit[i] == "url")
                                 {
-                                    articleurl.Add(mysplit[++i]);
+                                    dr["Url"] = mysplit[++i];
 
                                 }
                             }
@@ -105,20 +112,21 @@ namespace Project4
                             {
                                 if (mysplit[i] == "articlename")
                                 {
-                                    articleurl.Add(mysplit[++i]);
+                                    dr["Title"] = mysplit[++i];
 
                                 }
                             }
                         }
-
+                        dt.Rows.Add(dr);
                     }
-                   // RepeaterArticle.DataSource = articleurl;
-                   // RepeaterArticle.DataBind();
+                     RepeaterArticle.DataSource = dt;
+                     RepeaterArticle.DataBind();
                 }
                 
             }
             catch (Exception ex)
             {
+                LabelMessage.Text = ex.Message;
             }
             finally
             {
