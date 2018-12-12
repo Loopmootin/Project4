@@ -55,11 +55,16 @@ a {
   width: 100%;
   background-color: #fff;
   padding: 0 0 50px 0; }
+  .container .row {
+    margin-left: 0;
+    margin-right: 0; }
   .container .commercialImage {
     width: 100%;
-    height: auto; }
+    height: auto;
+    overflow: hidden; }
     .container .commercialImage img {
       height: 100%;
+      width: 100%;
       display: block;
       margin: 10px auto;
       box-shadow: 0 0 3px grey; }

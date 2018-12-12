@@ -4,12 +4,11 @@
 </asp:Content>
 <asp:Content ID="ContentBody" ContentPlaceHolderID="ContentPlaceHolderBody" runat="server">
     <div class="container">  
-
-        <div class="commercialImage">
-            <asp:Image ID="CommercialPoster" runat="server" />
-        </div>
-
         <div class="justify-content-md-center">
+            <div class="commercialImage">
+                <asp:Image ID="CommercialPoster" runat="server" />
+            </div>
+
             <h2>Top film</h2>
                 <asp:Repeater ID="RepeaterTop" runat="server">
                     <HeaderTemplate>
