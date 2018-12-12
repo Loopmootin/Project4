@@ -17,7 +17,6 @@ namespace Project4
 {
     public partial class Index : System.Web.UI.Page
     {
-        //private string[] articlesplit;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -113,8 +112,8 @@ namespace Project4
                         }
 
                     }
-                    RepeaterArticle.DataSource = articleurl;
-                    RepeaterArticle.DataBind();
+                   // RepeaterArticle.DataSource = articleurl;
+                   // RepeaterArticle.DataBind();
                 }
                 
             }

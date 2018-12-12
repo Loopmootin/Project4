@@ -10,7 +10,7 @@
         </div>
 
         <div class="justify-content-md-center">
-            <h2>Top film</h2>
+            <h2 class="primary-header">Top film</h2>
                 <asp:Repeater ID="RepeaterTop" runat="server">
                     <HeaderTemplate>
                                <div class="top-movies-container col-12 justify-content-around row">
