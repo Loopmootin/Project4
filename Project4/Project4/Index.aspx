@@ -30,57 +30,37 @@
                     </FooterTemplate>
                </asp:Repeater>
 
-            <h2>Nye film</h2>
-            <div class="new-movies-container col-12 justify-content-around row">
-                <div class="new-movie col-3 split-container">
 
-                </div>
-                <div class="new-movie col-3 split-container">
-
-                </div>
-                <div class="new-movie col-3 split-container">
-
-                </div>
-            </div>
             <h2>Artikler</h2>
             
-
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
               <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
               </ol>
+
               <div class="carousel-inner">
-                <div class="carousel-item">
-                  <img src="..." alt="...">
-                  <div class="carousel-caption d-none d-md-block">
-                    <h5>...</h5>
-                    <p>...</p>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                <img src="..." alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                <h5>...</h5>
-                <p>...</p>
-                </div>
-            </div>
-                <div class="carousel-item">
-                <img src="..." alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                <h5>...</h5>
-                <p>...</p>
-                </div>
-            </div>
-                <div class="carousel-item">
-                <img src="..." alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                <h5>...</h5>
-                <p>...</p>
-                </div>
-            </div>
-            </div>
+                  <div class="carousel-item active">
+                      <img class="d-block w-100" src="..." alt="First slide">
+                   </div>
+
+                <asp:Repeater ID="RepeaterArticle" runat="server">
+                    <HeaderTemplate></HeaderTemplate>
+                    <ItemTemplate>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="Pictures/avatar.jpg" alt="First slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5><%# Container.DataItem.ToString()  %></h5>
+                                <p>...</p>
+                            </div>
+                        </div>
+                    </ItemTemplate>
+                    <FooterTemplate></FooterTemplate>
+               </asp:Repeater>
+
+              </div>
+
               <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>

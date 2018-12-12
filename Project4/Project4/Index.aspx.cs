@@ -17,7 +17,7 @@ namespace Project4
 {
     public partial class Index : System.Web.UI.Page
     {
-        private string[] articlesplit;
+        //private string[] articlesplit;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -59,6 +59,8 @@ namespace Project4
 
             
         }
+
+        
         public void TopArticles()
         {
             //Tobtob
@@ -98,7 +100,15 @@ namespace Project4
                                     articleurl.Add(mysplit[++i]);
 
                                 }
+                            }
 
+                            for (int i = 0; i < mysplit.Length; i++)
+                            {
+                                if (mysplit[i] == "articlename")
+                                {
+                                    articleurl.Add(mysplit[++i]);
+
+                                }
                             }
                         }
 
