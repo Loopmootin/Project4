@@ -4,7 +4,7 @@
 
 $white: #fff;
 $blue: #374a67;
-$yellow: #FCD303;
+$yellow: #fcd303;
 $green: #397367;
 $gray: #9c91a6;
 
@@ -232,9 +232,10 @@ a {
         padding: 5px;
         position: absolute;
         z-index: 200;
-        bottom: 30px;
+        bottom: 20px;
+        margin: 5px;
         cursor: pointer;
-        left: 6vw;
+        left: 0;
         border-radius: $border
     }
 
@@ -249,10 +250,6 @@ a {
         color: black;
     }
 
-    .title {
-        min-height: 70px;
-        max-height: 70px;
-    }
     /* ============================
     Films
  ============================= */
