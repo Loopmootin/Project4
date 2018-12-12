@@ -21,7 +21,7 @@
 <body>
     <form id="formContent" runat="server">
     <nav class="navbar navbar-expand-xl">
-      <a class="navbar-brand" href="#"><img width="350px;" src="Pictures/FuckingFilmLogo.png" /></a>
+      <a class="navbar-brand" href="#"><img width="300px;" src="Pictures/FuckingFilmLogo.png" /></a>
       <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -29,27 +29,25 @@
           <asp:TextBox ID="search" runat="server" CssClass="form-control mr-sm-2" OnTextChanged="search_TextChanged"></asp:TextBox>
           <asp:Button ID="BtnMovieSearch" runat="server" OnClick="BtnMovieSearch_Click" Text="Søg Film" CssClass="btn btn-outline-success my-2 my-sm-0" />
         <ul class="navbar-nav">
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="Index.aspx"><i class="fas fa-home"></i> Hjem<span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Kategori.aspx"><i class="fas fa-video"></i> Film</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fas fa-newspaper"></i> Artikler</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Kategorier
+              <i class="fas fa-folder-open"></i> Kategorier
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="Kategori.aspx?id=1">Animation</a>
               <a class="dropdown-item" href="Kategori.aspx?id=3">Thriller</a>
               <a class="dropdown-item" href="Kategori.aspx?id=4">Science Fiction</a>
               <a class="dropdown-item" href="Kategori.aspx?id=2">Action</a>
+            </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="InsertAllMovies.aspx">InsertAllMovies</a>
+            <a class="nav-link" href="Kategori.aspx"><i class="fas fa-video"></i> Film</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fas fa-newspaper"></i> Artikler</a>
           </li>
         </ul>
       </div>

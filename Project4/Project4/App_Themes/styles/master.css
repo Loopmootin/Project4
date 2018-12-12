@@ -56,13 +56,21 @@ a {
   width: 100%;
   background-color: #fff;
   padding: 0 0 50px 0; }
+  .container .row {
+    margin-left: 0;
+    margin-right: 0; }
   .container .commercialImage {
-    width: 100%;
-    height: 150px; }
+    width: 80%;
+    height: auto;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto; }
     .container .commercialImage img {
       height: 100%;
+      width: 99%;
       display: block;
-      margin: 0 auto; }
+      margin: 10px auto;
+      box-shadow: 0 0 3px grey; }
   .container .split-container {
     min-height: 250px;
     max-width: 30%;
@@ -85,29 +93,6 @@ a {
       .container .split-container:hover img {
         transform: scale(0.96);
         transition: 0.5s; }
-  .container .commercials {
-    margin-top: 20px; }
-    .container .commercials .commercial {
-      display: none; }
-      .container .commercials .commercial h3, .container .commercials .commercial p {
-        z-index: 2;
-        position: absolute;
-        color: #fff;
-        width: 60%;
-        padding-left: 20px;
-        margin-top: 20px; }
-      .container .commercials .commercial p {
-        position: relative;
-        bottom: 35px;
-        width: 100%;
-        text-align: right;
-        padding-right: 20px;
-        margin-top: 0px; }
-      .container .commercials .commercial .logo-img {
-        height: 200px;
-        width: 100%;
-        z-index: 1;
-        overflow: hidden; }
 
 .primary-header {
   font-weight: 300;
@@ -177,6 +162,18 @@ footer {
         background-color: #fff;
         border: 1px solid #374a67;
         padding: 4px 9px; }
+
+.top-movie label {
+  color: white;
+  background: #374a67;
+  box-shadow: 0px 0px 3px grey;
+  padding: 5px;
+  position: absolute;
+  z-index: 200;
+  bottom: 30px;
+  cursor: pointer;
+  left: 6vw;
+  border-radius: 5px; }
 
 .top-movie align-content {
   text-decoration: none; }
