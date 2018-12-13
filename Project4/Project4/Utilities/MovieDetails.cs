@@ -56,7 +56,7 @@ namespace Project4.Utilities
                 conn.Open();
                 string sqlcheck = "SELECT * FROM Clicks WHERE movie_id = @movie_id AND date = @date";
                 SqlCommand cmd = new SqlCommand(sqlcheck, conn);
-                cmd.Parameters.Add("@movie_id", SqlDbType.Int, 50, "movie_id").Value = movieid;
+                cmd.Parameters.Add("@movie_id", SqlDbType.Int, 50, "movie_id").Value = movie_id;
                 cmd.Parameters.Add("@date", SqlDbType.Date).Value = DateTime.Today;
                 int newvalue = 0;
                 using (rdr = cmd.ExecuteReader())
@@ -73,7 +73,7 @@ namespace Project4.Utilities
                 {
                     cmd.Parameters.Clear();
                     cmd.CommandText = "UPDATE Clicks set Click = @click Where movie_id = @movie_id AND date = @date;";
-                    cmd.Parameters.Add("@movie_id", SqlDbType.Int, 50, "movie_id").Value = movieid;
+                    cmd.Parameters.Add("@movie_id", SqlDbType.Int, 50, "movie_id").Value = movie_id;
                     cmd.Parameters.Add("@date", SqlDbType.Date).Value = DateTime.Today;
                     cmd.Parameters.Add("@click", SqlDbType.Int).Value = newvalue;
                     cmd.ExecuteNonQuery();
@@ -84,7 +84,7 @@ namespace Project4.Utilities
                 {
                     cmd.Parameters.Clear();
                     cmd.CommandText = "INSERT INTO Clicks(movie_id, date, click) VALUES(@movie_id, @date, 1)";
-                    cmd.Parameters.Add("@movie_id", SqlDbType.Int, 50, "movie_id").Value = movieid;
+                    cmd.Parameters.Add("@movie_id", SqlDbType.Int, 50, "movie_id").Value = movie_id;
                     cmd.Parameters.Add("@date", SqlDbType.Date).Value = DateTime.Today;
                     cmd.ExecuteNonQuery();
                     // LabelInsert.Text = DateTime.Now.ToString("yyyy-dd-MM");
