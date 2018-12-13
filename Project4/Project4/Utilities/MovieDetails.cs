@@ -109,10 +109,10 @@ namespace Project4.Utilities
             string sqlsel = "select * from Movie";
             string sqlupd = "update Movie set movie.poster_url = @poster_url Where movie.movie_id = @movie_id";
             //Tobtob
-            SqlConnection conn = new SqlConnection(@"data source = DESKTOP-6CQP77U;  integrated security = true; database = MovieDatabase");
+            //SqlConnection conn = new SqlConnection(@"data source = DESKTOP-6CQP77U;  integrated security = true; database = MovieDatabase");
 
             //Chrischris
-            //SqlConnection conn = new SqlConnection(@"data source = LAPTOP-A8BTI830; integrated security = true; database = MovieDatabase");
+            SqlConnection conn = new SqlConnection(@"data source = LAPTOP-A8BTI830; integrated security = true; database = MovieDatabase");
             // SqlConnection conn = new SqlConnection(@"data source = CHRISTOFFER-PC; integrated security = true; database = MovieDatabase");
 
             conn.Open();
