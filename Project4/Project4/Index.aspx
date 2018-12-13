@@ -16,9 +16,11 @@
                     </HeaderTemplate>
                     <ItemTemplate>
                         <div class="top-movie col-sm-12 col-md-3 split-container">
-
+                                
                              <a href="film.aspx?movie=<%# Eval("movie_name") %>&id=<%# Eval("movie_id") %>&movieyear=<%# Eval("movie_release") %>">
+                                 <label><%# Eval("movie_name") %></label>
                       <div class="poster-image">
+
                      <img src="<%# Eval("poster_url") %>" alt="<%# Eval("poster_url") %>" /></a>
                      </div>
                         </div>
@@ -40,10 +42,11 @@
                     <ItemTemplate>
                         <div class="top-movie col-sm-12 col-md-3 split-container">
                         <a href="<%# DataBinder.Eval(Container.DataItem, "Url") %>" target="_blank">
-                             <span class="articletitle"><%# DataBinder.Eval(Container.DataItem, "Title") %></span>
+                            <span class="articletitle"><%# DataBinder.Eval(Container.DataItem, "Title") %></span>
                             <img src="Pictures/NewYorkTimesReview.jpg" />
                             
                         </a>
+                            
                         </div>
                     </ItemTemplate>
                     <FooterTemplate>
@@ -51,7 +54,7 @@
                     </FooterTemplate>
                </asp:Repeater>
 
-            <asp:Label ID="LabelMessage" runat="server" Text="Label"></asp:Label>
+            <asp:Label ID="LabelMessage" runat="server" Text=""></asp:Label>
 
         </div>
     </div>

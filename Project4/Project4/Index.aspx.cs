@@ -114,7 +114,7 @@ namespace Project4
 
                             for (int i = 0; i < mysplit.Length; i++)
                             {
-                                if (mysplit[i] == "display_title")
+                                if (mysplit[i] == "suggested_link_text")
                                 {
                                    // dr["Title"] = mysplit[++i];
                                    title = mysplit[++i];
