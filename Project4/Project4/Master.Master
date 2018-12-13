@@ -2,8 +2,9 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="da">
 <head runat="server">
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <asp:ContentPlaceHolder ID="head" runat="server">
@@ -81,7 +82,7 @@
               <h2>Kategorier</h2>
                 <hr /> 
                 <ul>
-                    <li><a href="Kategori.aspx?id=1"">Animation</a></li>
+                    <li><a href="Kategori.aspx?id=1">Animation</a></li>
                     <li><a href="Kategori.aspx?id=3">Thriller</a></li>
                     <li><a href="Kategori.aspx?id=4">Science Fiction</a></li>
                     <li><a href="Kategori.aspx?id=2">Action</a></li>

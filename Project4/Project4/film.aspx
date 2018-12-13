@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="film.aspx.cs" Inherits="Project4.film" %>
+﻿<%@ Page Title="FunKingFilm - Film" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="film.aspx.cs" Inherits="Project4.film" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderBody" runat="server">
@@ -27,7 +27,7 @@
                </div>
                 <div class="col">
                     <div class="film-image">
-                    <asp:Image ID="ImagePoster" runat="server" />
+                    <asp:Image ID="ImagePoster" runat="server" alt="" />
                     </div>
                 </div>
               </div>

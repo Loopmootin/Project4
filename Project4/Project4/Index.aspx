@@ -1,6 +1,5 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="Project4.Index" %>
+﻿<%@ Page Title="FunKingFilm - Forside" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="Project4.Index" %>
 <asp:Content ID="ContentHeader" ContentPlaceHolderID="head" runat="server">
-
 </asp:Content>
 <asp:Content ID="ContentBody" ContentPlaceHolderID="ContentPlaceHolderBody" runat="server">
     <div class="container">  
@@ -21,7 +20,7 @@
                                  <span class="movielabel"><%# Eval("movie_name") %></span>
                       <div class="poster-image">
 
-                     <img src="<%# Eval("poster_url") %>" alt="<%# Eval("poster_url") %>" /></a>
+                     <img src="<%# Eval("poster_url") %>" alt="<%# Eval("poster_url") %>"/></a>
                      </div>
                         </div>
                     </ItemTemplate>
@@ -42,7 +41,7 @@
                         <div class="top-movie col-sm-12 col-md-3 split-container">
                         <a  href="<%# DataBinder.Eval(Container.DataItem, "Url") %>" target="_blank">
                             <span class="articletitle"><%# DataBinder.Eval(Container.DataItem, "Title") %></span>
-                            <img src="Pictures/NewYorkTimesReview.jpg" />                        
+                            <img src="Pictures/NewYorkTimesReview.jpg" alt="" />                        
                         </a>
                         </div>
                     </ItemTemplate>

@@ -1,12 +1,11 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="Kategori.aspx.cs" Inherits="Project4.Kategori" %>
+﻿<%@ Page Title="FunKingFilm - Kategori" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="Kategori.aspx.cs" Inherits="Project4.Kategori" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <title>FunKingFilm - Kategori</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderBody" runat="server">
        <div class="category-selection">
            <div class="container">     
                         <div class="category-selection-category">
-                            <a class="category-selector" href="Kategori.aspx?id=1"">Animation</a>
+                            <a class="category-selector" href="Kategori.aspx?id=1">Animation</a>
                             <a class="category-selector" href="Kategori.aspx?id=3">Thriller</a>
                             <a class="category-selector" href="Kategori.aspx?id=4">Science Fiction</a>
                             <a class="category-selector" href="Kategori.aspx?id=2">Action</a>
@@ -38,8 +37,9 @@
                       <span class="movielabel"><%# Eval("movie_name") %></span>
                       </div>
                       <div class="poster-image">
-                     <img src="<%# Eval("poster_url") %>" alt="<%# Eval("poster_url") %>" /></a>
+                     <img src="<%# Eval("poster_url") %>" alt="<%# Eval("poster_url") %>" />
                      </div>
+                      </a>
                 </div>
               
             </ItemTemplate>
