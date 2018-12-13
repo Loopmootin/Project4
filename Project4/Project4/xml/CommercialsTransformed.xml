@@ -16,12 +16,12 @@
     <Name>Cartoons</Name>
     <Logo>logo3.jpg</Logo>
     <Phone>55+ 66666666</Phone>
-    <ViewCount>86</ViewCount>
+    <ViewCount>87</ViewCount>
   </Company>
   <Company>
     <Name>Web Developers</Name>
     <Logo>logo4.jpg</Logo>
     <Phone />
-    <ViewCount>35</ViewCount>
+    <ViewCount>37</ViewCount>
   </Company>
 </Companies>
