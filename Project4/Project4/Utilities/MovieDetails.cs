@@ -41,23 +41,23 @@ namespace Project4.Utilities
 
         }
 
-        public void Clicked(string movieid)
+        public void Clicked(string movie_id)
         {
             //Tobtob
-            //SqlConnection conn = new SqlConnection(@"data source = DESKTOP-6CQP77U;  integrated security = true; database = MovieDatabase");
+            SqlConnection conn = new SqlConnection(@"data source = DESKTOP-6CQP77U;  integrated security = true; database = MovieDatabase");
 
             //Chrischris
-            SqlConnection conn = new SqlConnection(@"data source = LAPTOP-A8BTI830; integrated security = true; database = MovieDatabase");
+            //SqlConnection conn = new SqlConnection(@"data source = LAPTOP-A8BTI830; integrated security = true; database = MovieDatabase");
             // SqlConnection conn = new SqlConnection(@"data source = CHRISTOFFER-PC; integrated security = true; database = MovieDatabase");
 
             SqlDataReader rdr = null;
             try
             {
                 conn.Open();
-                string sqlcheck = "SELECT * FROM clicks WHERE movie_id = @movie_id AND date = @date";
+                string sqlcheck = "SELECT * FROM Clicks WHERE movie_id = @movie_id AND date = @date";
                 SqlCommand cmd = new SqlCommand(sqlcheck, conn);
                 cmd.Parameters.Add("@movie_id", SqlDbType.Int, 50, "movie_id").Value = movieid;
-                cmd.Parameters.Add("@date", SqlDbType.Date).Value = DateTime.Now.ToString("yyyy-dd-MM");
+                cmd.Parameters.Add("@date", SqlDbType.Date).Value = DateTime.Today;
                 int newvalue = 0;
                 using (rdr = cmd.ExecuteReader())
                 {
@@ -65,34 +65,34 @@ namespace Project4.Utilities
                     {
                         newvalue = rdr.GetInt32(3);
                         newvalue += 1;
-                        // Labeltestlabel2.Text = newvalue.ToString();
+                        //  LabelNewValue.Text = newvalue.ToString();
 
                     }
                 }
                 if (newvalue != 0)
                 {
                     cmd.Parameters.Clear();
-                    cmd.CommandText = "UPDATE Clicks set click = @click Where movie_id = @movie_ids AND date = @date;";
-                    cmd.Parameters.Add("@movie_ids", SqlDbType.Int, 50, "movie_id").Value = movieid;
-                    cmd.Parameters.Add("@date", SqlDbType.Date).Value = DateTime.Now.ToString("yyyy-dd-MM");
+                    cmd.CommandText = "UPDATE Clicks set Click = @click Where movie_id = @movie_id AND date = @date;";
+                    cmd.Parameters.Add("@movie_id", SqlDbType.Int, 50, "movie_id").Value = movieid;
+                    cmd.Parameters.Add("@date", SqlDbType.Date).Value = DateTime.Today;
                     cmd.Parameters.Add("@click", SqlDbType.Int).Value = newvalue;
                     cmd.ExecuteNonQuery();
-                    // Labeltestlabel2.Text = "Clicks opdateret";
+                    // LabelUpdate.Text = "Clicks opdateret";
 
                 }
                 else
                 {
                     cmd.Parameters.Clear();
-                    cmd.CommandText = "INSERT INTO clicks(movie_id, date, click) VALUES(@movie_id, @date, 1)";
+                    cmd.CommandText = "INSERT INTO Clicks(movie_id, date, click) VALUES(@movie_id, @date, 1)";
                     cmd.Parameters.Add("@movie_id", SqlDbType.Int, 50, "movie_id").Value = movieid;
-                    cmd.Parameters.Add("@date", SqlDbType.Date).Value = DateTime.Now.ToString("yyyy-dd-MM");
+                    cmd.Parameters.Add("@date", SqlDbType.Date).Value = DateTime.Today;
                     cmd.ExecuteNonQuery();
-                    // LabelDATE.Text = DateTime.Now.ToString("yyyy-dd-MM");
+                    // LabelInsert.Text = DateTime.Now.ToString("yyyy-dd-MM");
                 }
             }
             catch (Exception ex)
             {
-               // Labeltestlabel2.Text = ex.Message;
+                // LabelMessage.Text = ex.Message;
             }
             finally
             {

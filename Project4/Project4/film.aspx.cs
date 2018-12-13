@@ -34,12 +34,13 @@ namespace Project4
 
             LabelMovieName.Text = movieresult;
             LabelYear.Text = movieyear;
-            newdetail.Clicked(movieid);
+              newdetail.Clicked(movieid);
               ImagePoster.ImageUrl = newdetail.image;
               LabelActors.Text = newdetail.actor;
               LabelPlot.Text = newdetail.plot;
               LabelRatings.Text = newdetail.rating;
               LabelPG.Text = newdetail.pgrated;
+           
         }
     }
 }
