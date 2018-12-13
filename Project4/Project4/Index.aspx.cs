@@ -63,10 +63,10 @@ namespace Project4
         public void TopArticles()
         {
             //Tobtob
-            //SqlConnection conn = new SqlConnection(@"data source = DESKTOP-6CQP77U;  integrated security = true; database = MovieDatabase");
+            SqlConnection conn = new SqlConnection(@"data source = DESKTOP-6CQP77U;  integrated security = true; database = MovieDatabase");
 
             //Chrischris
-            SqlConnection conn = new SqlConnection(@"data source = LAPTOP-A8BTI830; integrated security = true; database = MovieDatabase");
+            //SqlConnection conn = new SqlConnection(@"data source = LAPTOP-A8BTI830; integrated security = true; database = MovieDatabase");
             // SqlConnection conn = new SqlConnection(@"data source = CHRISTOFFER-PC; integrated security = true; database = MovieDatabase");
 
 
@@ -95,6 +95,10 @@ namespace Project4
                         string[] seperatingChars = { "\":\"", "\",\"", "\":[{\"", "\"},{\"", "\"}]\"", "{\"", "\"}" };
                         string[] mysplit = result.Split(seperatingChars, System.StringSplitOptions.RemoveEmptyEntries);
 
+                        string articleurl = "";
+                        string title = "";
+
+                        
                         dr = dt.NewRow();
                         if (mysplit[1] != "False")
                         {
@@ -103,21 +107,30 @@ namespace Project4
                             {
                                 if (mysplit[i] == "url")
                                 {
-                                    dr["Url"] = mysplit[++i];
-
+                                    //  dr["Url"] = mysplit[++i];
+                                    articleurl = mysplit[++i];
                                 }
                             }
 
                             for (int i = 0; i < mysplit.Length; i++)
                             {
-                                if (mysplit[i] == "articlename")
+                                if (mysplit[i] == "display_title")
                                 {
-                                    dr["Title"] = mysplit[++i];
+                                   // dr["Title"] = mysplit[++i];
+                                   title = mysplit[++i];
 
                                 }
                             }
                         }
-                        dt.Rows.Add(dr);
+
+                        dr = dt.NewRow();
+                        dr["Url"] = articleurl;
+                        dr["Title"] = title;
+                        if(!string.IsNullOrEmpty(articleurl))
+                        {
+                            dt.Rows.Add(dr);
+                        }
+                       
                     }
                      RepeaterArticle.DataSource = dt;
                      RepeaterArticle.DataBind();
