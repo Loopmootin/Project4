@@ -95,6 +95,10 @@ namespace Project4
                         string[] seperatingChars = { "\":\"", "\",\"", "\":[{\"", "\"},{\"", "\"}]\"", "{\"", "\"}" };
                         string[] mysplit = result.Split(seperatingChars, System.StringSplitOptions.RemoveEmptyEntries);
 
+                        string articleurl = "";
+                        string title = "";
+
+                        
                         dr = dt.NewRow();
                         if (mysplit[1] != "False")
                         {
@@ -103,21 +107,30 @@ namespace Project4
                             {
                                 if (mysplit[i] == "url")
                                 {
-                                    dr["Url"] = mysplit[++i];
-
+                                    //  dr["Url"] = mysplit[++i];
+                                    articleurl = mysplit[++i];
                                 }
                             }
 
                             for (int i = 0; i < mysplit.Length; i++)
                             {
-                                if (mysplit[i] == "articlename")
+                                if (mysplit[i] == "display_title")
                                 {
-                                    dr["Title"] = mysplit[++i];
+                                   // dr["Title"] = mysplit[++i];
+                                   title = mysplit[++i];
 
                                 }
                             }
                         }
-                        dt.Rows.Add(dr);
+
+                        dr = dt.NewRow();
+                        dr["Url"] = articleurl;
+                        dr["Title"] = title;
+                        if(!string.IsNullOrEmpty(articleurl))
+                        {
+                            dt.Rows.Add(dr);
+                        }
+                       
                     }
                      RepeaterArticle.DataSource = dt;
                      RepeaterArticle.DataBind();

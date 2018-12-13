@@ -39,9 +39,10 @@
                     </HeaderTemplate>
                     <ItemTemplate>
                         <div class="top-movie col-sm-12 col-md-3 split-container">
-                        <a href="<%# DataBinder.Eval(Container.DataItem, "Url") %>">
-                            <img src="Pictures/NewYorkTimesReview.jpg" />
+                        <a href="<%# DataBinder.Eval(Container.DataItem, "Url") %>" target="_blank">
                              <span class="articletitle"><%# DataBinder.Eval(Container.DataItem, "Title") %></span>
+                            <img src="Pictures/NewYorkTimesReview.jpg" />
+                            
                         </a>
                         </div>
                     </ItemTemplate>

@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Pictures\NewYorkTimesReview.jpg" />
     <Content Include="xml\TransformPage.aspx" />
     <None Include="App_Themes\styles\master.scss" />
     <Content Include="App_Themes\styles\master.css">
