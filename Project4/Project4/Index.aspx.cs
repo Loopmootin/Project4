@@ -45,7 +45,8 @@ namespace Project4
 
             try
             {
-                connect.createCommand("SELECT TOP 8 * FROM movie, Clicks WHERE movie.movie_id = Clicks.movie_id ORDER BY click desc", CommandType.Text);
+                connect.createCommand("SELECT TOP 8  * FROM movie, Clicks WHERE movie.movie_id = Clicks.movie_id AND Clicks.date = @date ORDER BY click desc", CommandType.Text);
+                connect.AddParameter("@date", SqlDbType.Date).Value = DateTime.Today;
                 RepeaterTop.DataSource = connect.executeCmd();
                 RepeaterTop.DataBind();
 

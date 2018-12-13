@@ -6,7 +6,7 @@
     <div class="container">  
         <div class="justify-content-md-center">
             <div class="commercialImage">
-                <asp:Image ID="CommercialPoster" runat="server" />
+                <asp:Image ID="CommercialPoster" AlternateText="Commerical Poster" runat="server" />
             </div>
 
             <h2 class="primary-header">Top film</h2>
@@ -36,7 +36,6 @@
             
                 <asp:Repeater ID="RepeaterArticle" runat="server">
                     <HeaderTemplate>
-
                         <div class="top-movies-container col-12 justify-content-around row">
                     </HeaderTemplate>
                     <ItemTemplate>
@@ -45,7 +44,6 @@
                             <span class="articletitle"><%# DataBinder.Eval(Container.DataItem, "Title") %></span>
                             <img src="Pictures/NewYorkTimesReview.jpg" />                        
                         </a>
-                          
                         </div>
                     </ItemTemplate>
                     <FooterTemplate>
