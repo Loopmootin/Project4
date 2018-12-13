@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="Kategori.aspx.cs" Inherits="Project4.Kategori" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <title>Fucking Film - Kategori</title>
+    <title>FunKingFilm - Kategori</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderBody" runat="server">
        <div class="category-selection">
@@ -35,7 +35,7 @@
                  <div class="top-movie col-sm-12 col-md-3 split-container">
                   <a href="film.aspx?movie=<%# Eval("movie_name") %>&id=<%# Eval("movie_id") %>&movieyear=<%# Eval("movie_release") %>">
                      <div class="title">
-                      <label><%# Eval("movie_name") %></label>
+                      <span class="movielabel"><%# Eval("movie_name") %></span>
                       </div>
                       <div class="poster-image">
                      <img src="<%# Eval("poster_url") %>" alt="<%# Eval("poster_url") %>" /></a>

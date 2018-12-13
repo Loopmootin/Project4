@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="Project4.Index" %>
 <asp:Content ID="ContentHeader" ContentPlaceHolderID="head" runat="server">
-    <title>Fucking Film - Forside</title>
+
 </asp:Content>
 <asp:Content ID="ContentBody" ContentPlaceHolderID="ContentPlaceHolderBody" runat="server">
     <div class="container">  
@@ -18,7 +18,7 @@
                         <div class="top-movie col-sm-12 col-md-3 split-container">
                                 
                              <a href="film.aspx?movie=<%# Eval("movie_name") %>&id=<%# Eval("movie_id") %>&movieyear=<%# Eval("movie_release") %>">
-                                 <label><%# Eval("movie_name") %></label>
+                                 <span class="movielabel"><%# Eval("movie_name") %></span>
                       <div class="poster-image">
 
                      <img src="<%# Eval("poster_url") %>" alt="<%# Eval("poster_url") %>" /></a>
@@ -32,7 +32,7 @@
                </asp:Repeater>
 
 
-            <h2 class="primary-header">Artikler</h2>
+            <h2 id="artikler" class="primary-header">Artikler</h2>
             
                 <asp:Repeater ID="RepeaterArticle" runat="server">
                     <HeaderTemplate>
@@ -41,12 +41,11 @@
                     </HeaderTemplate>
                     <ItemTemplate>
                         <div class="top-movie col-sm-12 col-md-3 split-container">
-                        <a href="<%# DataBinder.Eval(Container.DataItem, "Url") %>" target="_blank">
+                        <a  href="<%# DataBinder.Eval(Container.DataItem, "Url") %>" target="_blank">
                             <span class="articletitle"><%# DataBinder.Eval(Container.DataItem, "Title") %></span>
-                            <img src="Pictures/NewYorkTimesReview.jpg" />
-                            
+                            <img src="Pictures/NewYorkTimesReview.jpg" />                        
                         </a>
-                            
+                          
                         </div>
                     </ItemTemplate>
                     <FooterTemplate>

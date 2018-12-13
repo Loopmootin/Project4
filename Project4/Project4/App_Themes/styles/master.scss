@@ -33,6 +33,12 @@ a {
     min-height: 80px;
     padding: 0;
 
+    .navbar-brand {
+        img {
+            width: 300px;
+        }
+    }
+
     a {
         color: $white;
         font-weight: 300;
@@ -200,63 +206,65 @@ a {
     /* ============================
     Category site
  ============================= */
-    .category-selection {
-        display: block;
-        width: 60%;
-        margin: 30px auto;
+.category-selection {
+    display: block;
+    width: 60%;
+    margin: 30px auto;
 
-        .category-selection-category {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            width: 100%;
-            margin-bottom: 10px;
+    .category-selection-category {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 70%;
+        margin: 0 auto;
+        margin-bottom: 10px;
 
-            .category-selector {
-                background-color: $blue;
-                padding: 5px 10px;
-                border-radius: $border;
-                color: white;
-                text-decoration: none;
-                margin: 5px;
+        .category-selector {
+            background-color: $blue;
+            padding: 5px 10px;
+            border-radius: $border;
+            color: white;
+            text-decoration: none;
+            margin: 5px;
 
-                &:hover {
-                    color: $blue;
-                    background-color: $white;
-                    border: 1px solid $blue;
-                    padding: 4px 9px;
-                }
-            }
-        }
-
-        .category-selection-year {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            width: 100%;
-
-            .category-selector {
-                background-color: $blue;
-                padding: 5px 10px;
-                border-radius: $border;
-                color: white;
-                text-decoration: none;
-                margin: 5px;
-
-                &:hover {
-                    color: $blue;
-                    background-color: $white;
-                    border: 1px solid $blue;
-                    padding: 4px 9px;
-                }
+            &:hover {
+                color: $blue;
+                background-color: $white;
+                border: 1px solid $blue;
+                padding: 4px 9px;
             }
         }
     }
 
+    .category-selection-year {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 85%;
+        margin: 0 auto;
+
+        .category-selector {
+            background-color: $blue;
+            padding: 5px 10px;
+            border-radius: $border;
+            color: white;
+            text-decoration: none;
+            margin: 5px;
+
+            &:hover {
+                color: $blue;
+                background-color: $white;
+                border: 1px solid $blue;
+                padding: 4px 9px;
+            }
+        }
+    }
+}
+
 
 .top-movie {
-    label {
-        color: white;
+    .movielabel {
+        color: #000;
         background: $yellow;
         box-shadow: 0px 0px 3px grey;
         padding: 5px;
@@ -370,6 +378,10 @@ a {
                     font-size: 1.5em;
                 }
             }
+        }
+
+        .category-selection .category-selection-category {
+            width: 95%;
         }
 
         .navbar-brand {
